@@ -5,7 +5,7 @@ import org.jboss.errai.ui.nav.client.local.DefaultPage;
 import org.jboss.errai.ui.nav.client.local.Page;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
 
-@Templated
+@Templated("#root")
 @Page(path = "home", role = DefaultPage.class)
 public class HomePage extends Composite {
 

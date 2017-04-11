@@ -8,7 +8,7 @@ import org.jboss.errai.ui.shared.api.annotations.Templated;
  * @author Dmitrii Tikhomirov <chani@me.com>
  *         Created by treblereel on 4/4/17.
  */
-@Templated
+@Templated("#root")
 @Page(path = "simple")
 public class SimplePage extends Composite {
 }

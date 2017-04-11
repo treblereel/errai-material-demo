@@ -1,0 +1,40 @@
+<div data-field="root" id="root">
+    <h4 style="font-weight: 300;">Конструкция</h4>
+    <material-button text="Primary3" waves="LIGHT" textColor="WHITE" iconType="POLYMER" iconPosition="LEFT" />
+    <material-button text="Primary4" waves="LIGHT" textColor="GREEN" iconType="POLYMER" iconPosition="LEFT" />
+
+    <material-row>
+        <material-column grid="l5 s12 m5">
+            <material-card backgroundColor="WHITE" textColor="WHITE" data-field="materialCard">
+                <material-cardimage waves="LIGHT" data-field="cardimage">
+                    <material-image url="http://thatgrapejuice.net/wp-content/uploads/2013/08/pharrell-williams-that-grape-juice.png"/>
+                </material-cardimage>
+                <material-cardcontent backgroundColor="BLUE_GREY_DARKEN_3" layoutPosition="RELATIVE" padding="0">
+                    <material-row padding="24" margin="0" height="132px">
+                        <material-anchorbutton data-field="btnPlay" type="FLOATING" backgroundColor="BLUE_LIGHTEN_1" iconType="PLAY_ARROW" size="LARGE" waves="DEFAULT" layoutPosition="ABSOLUTE" right="32" top="-32"/>
+                        <material-label text="Pharell Williams" fontSize="2em"/>
+                        <material-label text="Love Yourself to Dance" fontSize="1.2em"/>
+                    </material-row>
+
+                    <material-row ui:field="musicPanel" textColor="WHITE" padding="24" margin="0" height="132px" textAlign="CENTER" layoutPosition="ABSOLUTE" top="0" width="100%" opacity="0" visibility="HIDDEN" backgroundColor="BLUE_LIGHTEN_1">
+                        <material-column grid="s4 l4">
+                            <material-icon iconType="FAST_REWIND" waves="DEFAULT" iconSize="SMALL" circle="true"/>
+                        </material-column>
+                        <material-column grid="s4 l4">
+                            <material-icon iconType="PAUSE" waves="DEFAULT" iconSize="SMALL" circle="true"/>
+                        </material-column>
+                        <material-column grid="s4 l4">
+                            <material-icon iconType="FAST_FORWARD" waves="DEFAULT" iconSize="SMALL" circle="true"    />
+                        </material-column>
+                        <material-label text="Now Playing"/>
+                    </material-row>
+                </material-cardcontent>
+                <material-cardaction backgroundColor="BLUE_GREY" height="88px" overflow="HIDDEN">
+                    <material-image ui:field="imgMusic" grid="l2" width="72px" height="48px" addStyleNames="circle" url="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRi9lfCkLutb7ugJlIjn84qWNoiICopC-Vyx7QQJRHF5E7GlqFG"/>
+                    <material-label ui:field="lblMusic" grid="l8" paddingTop="12" text="Lady Gaga / Telephone" fontSize="1.2em" addStyleNames="truncate"/>
+                </material-cardaction>
+            </material-card>
+        </material-column>
+    </material-row>
+
+</div>

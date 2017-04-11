@@ -22,19 +22,17 @@ public class Header extends Composite {
 
     @Inject
     @DataField
-    Div container;
+    Div header;
 
     @Inject
     SideNav sideNav;
 
     @PostConstruct
     protected void init() {
-       MaterialNavBar materialNavBar = new MaterialNavBar();
+        MaterialNavBar materialNavBar = new MaterialNavBar();
         materialNavBar.setBackgroundColor(Color.BLUE);
-/*
-        materialNavBar.setActivates("mysidebar");
-*/
-        container.add(materialNavBar);
+
+        header.add(materialNavBar);
 
         MaterialNavSection materialNavSection = new MaterialNavSection();
         materialNavSection.setTextAlign(TextAlign.RIGHT);

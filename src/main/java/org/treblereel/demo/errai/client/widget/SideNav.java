@@ -22,7 +22,7 @@ public class SideNav extends Composite {
 
     @Inject
     @DataField
-    Div container;
+    Div sidenav;
 
     @Inject
     TransitionTo<ButtonPage> toButtonPage;
@@ -66,7 +66,15 @@ public class SideNav extends Composite {
         home.setIconColor(Color.BLUE_GREY);
         materialSideNav.add(home);
 
-        container.add(materialSideNav);
+        MaterialLink dune = new MaterialLink();
+        dune.setText("DUNE");
+        dune.setHref("#dune");
+        dune.setIconType(IconType.HOME);
+        dune.setIconPosition(IconPosition.LEFT);
+        dune.setIconColor(Color.AMBER_LIGHTEN_1);
+        materialSideNav.add(dune);
+
+        sidenav.add(materialSideNav);
     }
 
 }

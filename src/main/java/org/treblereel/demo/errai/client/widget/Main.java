@@ -12,9 +12,9 @@ public class Main extends Composite {
 
     @Inject
     @DataField
-    private MaterialContainer container;
+    private MaterialContainer main;
 
     public MaterialContainer getContainer() {
-        return container;
+        return main;
     }
 }
