@@ -1,0 +1,92 @@
+<div data-field="root" id="root">
+    <material-Row>
+        <material-Title title="Date Picker" description="Material Datepicker"/>
+        <material-DatePicker placeholder="Date" grid="s12"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Disabled Styles" description="You can disable the datepicker by adding enabled='false'"/>
+        <material-DatePicker placeholder="Birthday" enabled="false" grid="s12"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Date Picker Selection Types"
+                        description="You can set easily the selection type of your datepicker by adding an attribute, selectionType='YEAR'. Here is the available formats [DAY, MONTH_DAY, YEAR_MONTH_DAY, YEAR]  NOT WORKING for data-fields !!!!!!!!!"/>
+        <material-DatePicker placeholder="Date" selectionType="YEAR" grid="s12"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Auto Close"
+                        description="Provides a way to automatically closes the datepicker after selecting dates."/>
+        <material-DatePicker grid="s12" autoClose="true" placeholder="Date"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Mobile" description="Open this time picker on a mobile device to test."/>
+        <material-DatePicker detectOrientation="true" grid="s12" placeholder="Supports mobile orientations"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="setDate() and getDate()"/>
+        <material-DatePicker grid="s12" placeholder="Date" selectionType="YEAR" data-field="dp"/>
+        <material-Button text="Set Date to January 1 2016" data-field="btnSetDate"/>
+        <material-Button text="Get the date" data-field="btnGetDate"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="DatePicker : setValue(value, fireEvents)"/>
+
+        <material-DatePicker placeholder="DatePicker" grid="s12" data-field="dpValue"/>
+
+        <material-Button text="Set Value" marginRight="20" data-field="btnDpValue"/>
+        <material-Button text="Set Value with Event" data-field="btnDpValueEvent"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Formats"
+                        description="You can set the format of the date picker by adding format='FORMAT'"/>
+        <material-DatePicker grid="s12" placeholder="Custom Format" format="Yehey yyyy mm dd"/>
+        <material-Button text="Set Date with custom format"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Date Limit"
+                        description="You can limit the date by calling setDateLimit(Date min, Date max) method."/>
+        <material-DatePicker placeholder="With Limit" data-field="dpLimit" />
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Clear()" description="Clearing the value of datepicker."/>
+        <material-DatePicker grid="s12" placeholder="Birthday" data-field="dpClear"/>
+        <material-Button text="Clear" iconType="CLEAR" data-field="btnClear"/>
+    </material-Row>
+
+
+    <material-Row>
+        <material-Title title="Open / Close control"
+                        description="You can control programmatically the date picker. We added value change event with datepicker.close() upon triggering the event."/>
+        <material-DatePicker grid="s12" placeholder="Birthdate" data-field="dpOpenClose" />
+        <material-Button text="Open DatePicker" data-field="btnOpen"/>
+    </material-Row>
+
+    <material-Row>
+        <material-Title title="Events"
+                        description="We provided events on date picker namely : Close, Open, ValueChange events."/>
+        <material-DatePicker grid="s12" placeholder="Birthday" data-field="dpEvents"/>
+    </material-Row>
+
+
+    <material-Title title="Language Translations"
+                    description="With API we have supported 43 languages into the datepicker component."/>
+    <material-ListBox placeholder="Select Language" grid="l4" data-field="lstLanguage"/>
+    <material-DatePicker placeholder="With Translation" grid="l4" data-field="dpTranslation"/>
+
+    <material-Row>
+        <material-Title title="Language Translations"
+                        description="With API we have supported 43 languages into the datepicker component."/>
+        <material-Row>
+            <material-ListBox placeholder="Select Language" grid="l4" data-field="lstLanguage"/>
+            <material-DatePicker placeholder="With Translation" grid="l4" data-field="dpTranslation"/>
+        </material-Row>
+    </material-Row>
+</div>

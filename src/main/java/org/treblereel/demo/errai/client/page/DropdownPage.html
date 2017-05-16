@@ -1,0 +1,38 @@
+<div data-field="root" id="root">
+
+    <material-button activates="dp-4" text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" />
+    <material-dropdown activator="dp-4" belowOrigin="false" constrainWidth="false">
+        <material-link text="First"/>
+        <material-link text="Second">
+            <material-badge text="1 new" textColor="WHITE"/>
+        </material-link>
+        <material-link text="Third"/>
+    </material-dropdown>
+
+    <material-button activates="dp-5" text="Dropdown5" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT"
+                     textColor="WHITE" >
+    <material-dropdown activator="dp-5" belowOrigin="false" constrainWidth="false">
+        <material-link text="First"/>
+        <material-link text="Second">
+            <material-badge text="1 new" textColor="WHITE"/>
+        </material-link>
+        <material-link text="Third"/>
+    </material-dropdown>
+    </material-button>
+
+    <material-navbar width="100%">
+        <material-navbrand text="App Name"/>
+        <material-navsection position="RIGHT">
+            <material-link text="Dropdown" activates="dp-5" textColor="WHITE" iconType="ARROW_DROP_DOWN"
+                           iconPosition="RIGHT">
+            </material-link>
+        </material-navsection>
+    </material-navbar>
+
+    <material-dropdown activator="dp-5" constrainWidth="true">
+        <material-link waves="DEFAULT" textColor="BLACK" text="Drop 1"/>
+        <material-link waves="DEFAULT" enabled="false" textColor="BLACK" text="Drop 2" separator="true"/>
+        <material-link waves="DEFAULT" textColor="BLACK" text="Drop 3"/>
+    </material-dropdown>
+     
+</div>

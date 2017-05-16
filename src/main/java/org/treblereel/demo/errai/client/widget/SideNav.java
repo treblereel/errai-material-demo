@@ -1,7 +1,7 @@
 package org.treblereel.demo.errai.client.widget;
 
 import com.google.gwt.user.client.ui.Composite;
-import org.treblereel.demo.errai.client.page.ButtonPage;
+import org.treblereel.demo.errai.client.page.*;
 import gwt.material.design.client.constants.Color;
 import gwt.material.design.client.constants.IconPosition;
 import gwt.material.design.client.constants.IconType;
@@ -27,18 +27,51 @@ public class SideNav extends Composite {
     @Inject
     TransitionTo<ButtonPage> toButtonPage;
 
+    @Inject
+    TransitionTo<BadgesPage> toBadgesPage;
+
+    @Inject
+    TransitionTo<DropdownPage> toDropdownPage;
+
+    @Inject
+    TransitionTo<BreadcrumbsPage> toBreadcrumbsPage;
+
+    @Inject
+    TransitionTo<CollapsiblesPage> toCollapsiblesPage;
+
+    @Inject
+    TransitionTo<CollectionsPage> toCollectionsPage;
+    @Inject
+    TransitionTo<DatePickerPage> toDatePickerPage;
+
 
     @PostConstruct
     protected void init() {
 
         MaterialSideNav materialSideNav = new MaterialSideNav();
         materialSideNav.setWidth("300");
-        materialSideNav.setType(SideNavType.FIXED);
+        //materialSideNav.setType(SideNavType.FIXED);
         materialSideNav.setCloseOnClick(false);
 
         MaterialNavBrand materialNavBrand = new MaterialNavBrand();
         materialNavBrand.setText("Title");
         materialSideNav.add(materialNavBrand);
+
+        MaterialLink badges = new MaterialLink();
+        badges.setText("Badges");
+        badges.setIconType(IconType.ACCOUNT_BALANCE);
+        badges.setIconPosition(IconPosition.LEFT);
+        badges.setIconColor(Color.BLUE_GREY);
+        badges.addClickHandler( click -> toBadgesPage.go());
+        materialSideNav.add(badges);
+
+        MaterialLink breadcrumbs = new MaterialLink();
+        breadcrumbs.setText("Breadcrumbs");
+        breadcrumbs.setIconType(IconType.NATURE);
+        breadcrumbs.setIconPosition(IconPosition.LEFT);
+        breadcrumbs.setIconColor(Color.BLUE_GREY);
+        breadcrumbs.addClickHandler( click -> toBreadcrumbsPage.go());
+        materialSideNav.add(breadcrumbs);
 
         MaterialLink inbox = new MaterialLink();
         inbox.setText("Buttons");
@@ -46,9 +79,39 @@ public class SideNav extends Composite {
         inbox.setIconPosition(IconPosition.LEFT);
         inbox.setIconColor(Color.BLUE_GREY);
         inbox.addClickHandler( click -> toButtonPage.go());
-
-
         materialSideNav.add(inbox);
+
+        MaterialLink datepicker = new MaterialLink();
+        datepicker.setText("Datepicker");
+        datepicker.setIconType(IconType.DATE_RANGE);
+        datepicker.setIconPosition(IconPosition.LEFT);
+        datepicker.setIconColor(Color.BLUE_GREY);
+        datepicker.addClickHandler( click -> toDatePickerPage.go());
+        materialSideNav.add(datepicker);
+
+        MaterialLink dropdown = new MaterialLink();
+        dropdown.setText("Dropdown");
+        dropdown.setIconType(IconType.FAST_FORWARD);
+        dropdown.setIconPosition(IconPosition.LEFT);
+        dropdown.setIconColor(Color.BLUE_GREY);
+        dropdown.addClickHandler( click -> toDropdownPage.go());
+        materialSideNav.add(dropdown);
+
+        MaterialLink collapsibles = new MaterialLink();
+        collapsibles.setText("Collapsibles");
+        collapsibles.setIconType(IconType.FAST_REWIND);
+        collapsibles.setIconPosition(IconPosition.LEFT);
+        collapsibles.setIconColor(Color.BLUE_GREY);
+        collapsibles.addClickHandler( click -> toCollapsiblesPage.go());
+        materialSideNav.add(collapsibles);
+
+        MaterialLink collections = new MaterialLink();
+        collections.setText("Collections");
+        collections.setIconType(IconType.LABEL_OUTLINE);
+        collections.setIconPosition(IconPosition.LEFT);
+        collections.setIconColor(Color.BLUE_GREY);
+        collections.addClickHandler( click -> toCollectionsPage.go());
+        materialSideNav.add(collections);
 
         MaterialLink simple = new MaterialLink();
         simple.setText("SIMPLE");

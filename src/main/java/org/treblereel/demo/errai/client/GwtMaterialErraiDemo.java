@@ -7,6 +7,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import org.jboss.errai.ioc.client.api.EntryPoint;
 import org.jboss.errai.ui.nav.client.local.Navigation;
+import org.treblereel.demo.errai.client.page.BadgesPage;
 import org.treblereel.demo.errai.client.widget.Footer;
 import org.treblereel.demo.errai.client.widget.Header;
 import org.treblereel.demo.errai.client.widget.Main;
@@ -33,6 +34,9 @@ public class GwtMaterialErraiDemo extends Composite {
     @Inject
     private Footer footer;
 
+    @Inject
+    BadgesPage badgesPage;
+
     @PostConstruct
     protected void init() {
 
@@ -42,6 +46,8 @@ public class GwtMaterialErraiDemo extends Composite {
         RootPanel.get().add(sideNav);
         RootPanel.get().add(content);
         RootPanel.get().add(footer);
+
+        //RootPanel.get().add(badgesPage);
 
     }
 }

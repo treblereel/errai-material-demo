@@ -1,5 +1,5 @@
 <!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 1.6//EN"
-        "http://google-web-toolkit.googlecode.com/svn/releases/1.6/distro-source/core/src/gwt-module.dtd">
+        "http://google-web-toolkit.googlecode.com/svn/releases/2.8.0/distro-source/core/src/gwt-module.dtd">
 
 <module rename-to="App">
 
@@ -8,6 +8,9 @@
 
   <inherits name="org.jboss.errai.material.Material"/>
   <inherits name="org.jboss.errai.enterprise.All" />
+
+  <inherits name="org.jboss.errai.ui.UI"/>
+  <inherits name="org.jboss.errai.ui.nav.Navigation"/>
 
   <set-property name="gwt.logging.enabled" value="TRUE" />
   <set-property name="gwt.logging.consoleHandler" value="ENABLED" />
