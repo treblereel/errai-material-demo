@@ -1,119 +1,416 @@
 <div data-field="root" id="root">
 
-<h1>Accordion</h1>
-     <material-Collapsible grid="s12 m6 l8" active="1">
-     <!-- ITEM 1 -->
-     <material-CollapsibleItem active="true">
-      <material-CollapsibleHeader>
-       <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-      </material-CollapsibleHeader>
-      <material-CollapsibleBody>
-       <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-      </material-CollapsibleBody>
-     </material-CollapsibleItem>
-     <material-CollapsibleItem>
-      <material-CollapsibleHeader>
-       <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-      </material-CollapsibleHeader>
-      <material-CollapsibleBody>
-       <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-      </material-CollapsibleBody>
-     </material-CollapsibleItem>
-     <!-- Other Collapsible items here -->
-</material-Collapsible>
 
-<h1>Expandable</h1>
-     <material-Collapsible accordion="false">
-     <!-- ITEM 1 -->
-     <material-CollapsibleItem>
-      <material-CollapsibleHeader>
-       <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-      </material-CollapsibleHeader>
-      <material-CollapsibleBody>
-       <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-      </material-CollapsibleBody>
-     </material-CollapsibleItem>
-     <!-- Other Collapsible items here -->
-</material-Collapsible>
+    <material-Row addStyleNames="code">
+        <material-Title title="Accordion" description="MaterialCollapsible defaults to accordion expansion type."/>
+        <material-Collapsible>
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 2 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 3 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
 
-<h1>Popout</h1>
-     <material-Collapsible type="POPOUT">
-     <!-- ITEM 1 -->
-     <material-CollapsibleItem>
-      <material-CollapsibleHeader>
-       <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-      </material-CollapsibleHeader>
-      <material-CollapsibleBody>
-       <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-      </material-CollapsibleBody>
-     </material-CollapsibleItem>
-     <!-- Other Collapsible items here -->
-</material-Collapsible>
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Collapsible grid="s12 m6 l8">
+            &emsp;&lt;!-- ITEM 1 -->
+            &emsp;&lt;material-CollapsibleItem>
+            &emsp;&emsp;&lt;material-CollapsibleHeader>
+            &emsp;&emsp;&emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &emsp;&emsp;&lt;/material-CollapsibleHeader>
+            &emsp;&emsp;&lt;material-CollapsibleBody>
+            &emsp;&emsp;&emsp;&lt;material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &emsp;&emsp;&lt;/material-CollapsibleBody>
+            &emsp;&lt;/material-CollapsibleItem>
+            &emsp;&lt;!-- Other Collapsible items here -->
 
-<h1>Style</h1>
-     <material-Collapsible type="POPOUT">
-     <!-- ITEM 1 --><br/>  <material-CollapsibleItem>
-      <material-CollapsibleHeader backgroundColor="GREY" waves="DEFAULT">
-       <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="WHITE"/>
-      </material-CollapsibleHeader>
-      <material-CollapsibleBody backgroundColor="GREY_DARKEN_1">
-       <material-Label textColor="WHITE" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-      </material-CollapsibleBody>
-     </material-CollapsibleItem>
-</material-Collapsible>
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
 
-<h1>Preselected Section</h1>
-    <material-Collapsible type="POPOUT" active="1">
-        <!-- ITEM 1 -->
-        <material-CollapsibleItem>
-            <material-CollapsibleHeader>
-                <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-            </material-CollapsibleHeader>
-            <material-CollapsibleBody>
-                <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-            </material-CollapsibleBody>
-        </material-CollapsibleItem>
-        <!-- Other collapsible items here -->
-    </material-Collapsible>
+    <material-Row addStyleNames="code">
+        <material-Title title="Expandable" description="You can set the expandable type by adding an attribute accordion='false'"/>
+        <material-Collapsible accordion="false">
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 2 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 3 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
 
-<h1>Nested Collapsibles</h1>
-    <material-Collapsible type="POPOUT" active="1">
-        <!-- ITEM 1 -->
-         <material-CollapsibleItem>
-          <material-CollapsibleHeader>
-           <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-          </material-CollapsibleHeader>
-          <material-CollapsibleBody>
+        <pre addStyleNames="lang-xml ">
+            &emsp;&lt;material-Collapsible accordion="false">
+            &emsp;&lt;!-- ITEM 1 -->
+            &emsp;&lt;material-CollapsibleItem>
+            &emsp;&emsp;&lt;material-CollapsibleHeader>
+            &emsp;&emsp;&emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &emsp;&emsp;&lt;/material-CollapsibleHeader>
+            &emsp;&emsp;&lt;material-CollapsibleBody>
+            &emsp;&emsp;&emsp;&lt;material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &emsp;&emsp;&lt;/material-CollapsibleBody>
+            &emsp;&lt;/material-CollapsibleItem>
+            &emsp;&lt;!-- Other Collapsible items here -->
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
 
-           <-- Child Collapsible -->
-           <material-Collapsible type="POPOUT" active="1">
-            <material-CollapsibleItem>
-             <material-CollapsibleHeader>
-              <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-             </material-CollapsibleHeader>
-             <material-CollapsibleBody>
-              <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-             </material-CollapsibleBody>
-            </material-CollapsibleItem>
+    <material-Row addStyleNames="code">
+        <material-Title title="Popout" description="You can set the popout type by adding an attribute type='POPOUT'"/>
+        <material-Collapsible type="POPOUT">
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 2 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 3 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
 
-           </material-Collapsible>
-          </material-CollapsibleBody>
-         </material-CollapsibleItem>
-        <!-- Other collapsible items here -->
-    </material-Collapsible>
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Collapsible type="POPOUT">
+            &emsp;&lt;!-- ITEM 1 -->
+            &emsp;&lt;material-CollapsibleItem>
+            &emsp;&emsp;&lt;material-CollapsibleHeader>
+            &emsp;&emsp;&emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &emsp;&emsp;&lt;/material-CollapsibleHeader>
+            &emsp;&emsp;&lt;material-CollapsibleBody>
+            &emsp;&emsp;&emsp;&lt;material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &emsp;&emsp;&lt;/material-CollapsibleBody>
+            &emsp;&lt;/material-CollapsibleItem>
+            &emsp;&lt;!-- Other Collapsible items here -->
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
 
-<h1></h1>
-     <material-Collapsible type="POPOUT" active="1">
-     <!-- ITEM 1 -->
-     <material-CollapsibleItem>
-      <material-CollapsibleHeader>
-       <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
-       <material-Icon iconType="DELETE" waves="DEFAULT" float="RIGHT" circle="true" />
-       <material-Icon iconType="PIN_DROP" waves="DEFAULT" float="RIGHT" circle="true" />
-      </material-CollapsibleHeader>
-      <material-CollapsibleBody>
-       <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-      </material-CollapsibleBody>
-     </material-CollapsibleItem>
-</material-Collapsible>
+    <material-Row addStyleNames="code">
+        <material-Title title="Style" description="You can define easily the style of your collapsible"/>
+        <material-Collapsible type="POPOUT">
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader backgroundColor="GREY" waves="DEFAULT">
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="WHITE"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody backgroundColor="GREY_DARKEN_1">
+                    <material-Label textColor="WHITE" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Collapsible type="POPOUT">
+            &emsp;&lt;!-- ITEM 1 -->&lt;br/>
+            &emsp;&lt;material-CollapsibleItem>
+            &emsp;&emsp;&lt;material-CollapsibleHeader backgroundColor="GREY" waves="DEFAULT">
+            &emsp;&emsp;&emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="WHITE"/>
+            &emsp;&emsp;&lt;/material-CollapsibleHeader>
+            &emsp;&emsp;&lt;material-CollapsibleBody backgroundColor="GREY_DARKEN_1">
+            &emsp;&emsp;&emsp;&lt;material-Label textColor="WHITE" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &emsp;&emsp;&lt;/material-CollapsibleBody>
+            &emsp;&lt;/material-CollapsibleItem>
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Preselected Section" description="If you want a collapsible with a preopened section just add active='1' the parameter is the index of the collapsible item."/>
+        <material-Collapsible type="POPOUT" active="1">
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 2 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 3 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
+
+        <pre addStyleNames="lang-xml">
+            &lt;material-Collapsible type="POPOUT" active="1">
+            &lt;!-- ITEM 1 -->
+            &lt;material-CollapsibleItem>
+            &lt;material-CollapsibleHeader>
+            &lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &lt;/material-CollapsibleHeader>
+            &lt;material-CollapsibleBody>
+            &lt;material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &lt;/material-CollapsibleBody>
+            &lt;/material-CollapsibleItem>
+            &lt;!-- Other collapsible items here -->
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title description="Or you can simply set the MaterialCollapsibleItem as active='true'."/>
+        <material-Collapsible type="POPOUT">
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem active="true">
+                <material-CollapsibleHeader>
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 2 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 3 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
+
+        <pre addStyleNames="lang-xml">
+            &lt;material-Collapsible type="POPOUT">
+            &lt;!-- ITEM 1 -->
+            &lt;material-CollapsibleItem active="true">
+            &lt;material-CollapsibleHeader>
+            &lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &lt;/material-CollapsibleHeader>
+            &lt;material-CollapsibleBody>
+            &lt;material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &lt;/material-CollapsibleBody>
+            &lt;/material-CollapsibleItem>
+            &lt;!-- Other collapsible items here -->
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Nested Collapsibles" />
+        <material-Collapsible type="POPOUT" active="1">
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <!-- Another Collapsible -->
+                    <material-Collapsible type="POPOUT" active="1">
+                        <!-- ITEM 1 -->
+                        <material-CollapsibleItem>
+                            <material-CollapsibleHeader>
+                                <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                            </material-CollapsibleHeader>
+                            <material-CollapsibleBody>
+                                <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                            </material-CollapsibleBody>
+                        </material-CollapsibleItem>
+                        <!-- ITEM 2 -->
+                        <material-CollapsibleItem>
+                            <material-CollapsibleHeader>
+                                <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                            </material-CollapsibleHeader>
+                            <material-CollapsibleBody>
+                                <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                            </material-CollapsibleBody>
+                        </material-CollapsibleItem>
+                        <!-- ITEM 3 -->
+                        <material-CollapsibleItem>
+                            <material-CollapsibleHeader>
+                                <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                            </material-CollapsibleHeader>
+                            <material-CollapsibleBody>
+                                <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                            </material-CollapsibleBody>
+                        </material-CollapsibleItem>
+                    </material-Collapsible>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 2 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 3 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
+
+        <pre addStyleNames="lang-xml">
+            &lt;material-Collapsible type="POPOUT" active="1">
+            &lt;!-- ITEM 1 -->
+            &emsp;&lt;material-CollapsibleItem>
+            &emsp;&emsp;&lt;material-CollapsibleHeader>
+            &emsp;&emsp;&emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &emsp;&emsp;&lt;/material-CollapsibleHeader>
+            &emsp;&emsp;&lt;material-CollapsibleBody><br/>
+
+            &emsp;&emsp;&emsp;&lt;-- Child Collapsible -->
+            &emsp;&emsp;&emsp;&lt;material-Collapsible type="POPOUT" active="1">
+            &emsp;&emsp;&emsp;&emsp;&lt;material-CollapsibleItem>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;material-CollapsibleHeader>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;/material-CollapsibleHeader>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;material-CollapsibleBody>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&lt;material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&lt;/material-CollapsibleBody>
+            &emsp;&emsp;&emsp;&emsp;&lt;/material-CollapsibleItem><br/>
+            &emsp;&emsp;&emsp;&lt;/material-Collapsible>
+
+            &emsp;&emsp;&lt;/material-CollapsibleBody>
+            &emsp;&lt;/material-CollapsibleItem>
+            &lt;!-- Other collapsible items here -->
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Collapsible Secondary Icons" />
+        <material-Collapsible type="POPOUT" active="1">
+            <!-- ITEM 1 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                    <material-Icon iconType="DELETE" waves="DEFAULT" float="RIGHT" circle="true" />
+                    <material-Icon iconType="PIN_DROP" waves="DEFAULT" float="RIGHT" circle="true" />
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 2 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Second" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                    <material-Icon iconType="DELETE" waves="DEFAULT" float="RIGHT" circle="true" />
+                    <material-Icon iconType="PIN_DROP" waves="DEFAULT" float="RIGHT" circle="true" />
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+            <!-- ITEM 3 -->
+            <material-CollapsibleItem>
+                <material-CollapsibleHeader>
+                    <material-Link text="Third" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+                    <material-Icon iconType="DELETE" waves="DEFAULT" float="RIGHT" circle="true" />
+                    <material-Icon iconType="PIN_DROP" waves="DEFAULT" float="RIGHT" circle="true" />
+                </material-CollapsibleHeader>
+                <material-CollapsibleBody>
+                    <material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+                </material-CollapsibleBody>
+            </material-CollapsibleItem>
+        </material-Collapsible>
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Collapsible type="POPOUT" active="1">
+            &emsp;&lt;!-- ITEM 1 -->
+            &emsp;&lt;material-CollapsibleItem>
+            &emsp;&emsp;&lt;material-CollapsibleHeader>
+            &emsp;&emsp;&emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="LEFT" textColor="BLACK"/>
+            &emsp;&emsp;&emsp;&lt;material-Icon iconType="DELETE" waves="DEFAULT" float="RIGHT" circle="true" />
+            &emsp;&emsp;&emsp;&lt;material-Icon iconType="PIN_DROP" waves="DEFAULT" float="RIGHT" circle="true" />
+            &emsp;&emsp;&lt;/material-CollapsibleHeader>
+            &emsp;&emsp;&lt;material-CollapsibleBody>
+            &emsp;&emsp;&emsp;&lt;material-Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
+            &emsp;&emsp;&lt;/material-CollapsibleBody>
+            &emsp;&lt;/material-CollapsibleItem>
+            &lt;/material-Collapsible>
+        </pre>
+    </material-Row>
 </div>

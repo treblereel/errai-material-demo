@@ -1,1 +1,51 @@
-<header data-field="header"></header>
+<div data-field="root">
+    <material-Panel>
+        <material-Header data-field="header" width="100%">
+
+            <material-NavBar data-field="navBar" activates="sideBar" width="100%" backgroundColor="BLUE" textColor="WHITE" />
+            <material-SideNav data-field="sideBar" alwaysShowActivator="true" id="sideBar"
+                 allowBodyScroll="true" showOnAttach="true" backgroundColor="WHITE" >
+
+                <material-NavBrand text="Gwt Material and Errai" height="100px"/>
+                <material-Collapsible>
+                    <material-link text="Info" iconType="info_outline" iconPosition="LEFT" iconColor="blue_grey" href="#home"/>
+                    <material-link text="Getting started" iconType="cloud_download" iconPosition="LEFT" iconColor="blue_grey"
+                                   href="#gettingstarted"/>
+                    <material-CollapsibleItem>
+                        <material-CollapsibleHeader waves="DEFAULT">
+                            <material-link text="Components" iconType="polymer" iconPosition="LEFT" iconColor="blue_grey"/>
+                        </material-CollapsibleHeader>
+                        <material-CollapsibleBody>
+
+                            <material-link text="Badges" href="#badges"/>
+                            <material-link text="Buttons" href="#buttons"/>
+                            <material-link text="Breadcrumbs" href="#breadcrumbs"/>
+                            <material-link text="Cards" href="#cards"/>
+                            <material-link text="Chips" href="#chips"/>
+                            <material-link text="Collapsible" href="#collapsible"/>
+                            <material-link text="Collections" href="#collections"/>
+                            <material-link text="Dialogs" href="#dialogs"/>
+                            <material-link text="Dropdown" href="#dropdown"/>
+                            <material-link text="Errors" href="#errors"/>
+                            <material-link text="Forms" href="#forms"/>
+                            <material-link text="Fabs" href="#fabs"/>
+                            <material-link text="Footer" href="#footer"/>
+                            <material-link text="Loaders" href="#loader"/>
+                            <material-link text="Media" href="#media"/>
+                            <material-link text="Navbar" href="#navbar"/>
+                            <material-link text="Pickers" href="#pickers"/>
+                            <material-link text="Pushpin" href="#pushpin"/>
+                            <material-link text="Search" href="#search"/>
+                            <material-link text="Sidenavs" href="#sidenavs"/>
+                            <material-link text="Scrollspy" href="#scrollspy"/>
+                            <material-link text="Tabs" href="#tabs"/>
+                        </material-CollapsibleBody>
+                    </material-CollapsibleItem>
+                </material-Collapsible>
+            </material-SideNav>
+
+        </material-Header>
+
+    </material-Panel>
+
+</div>

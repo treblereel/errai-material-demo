@@ -1,38 +1,133 @@
 <div data-field="root" id="root">
 
-    <material-button activates="dp-4" text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" />
-    <material-dropdown activator="dp-4" belowOrigin="false" constrainWidth="false">
-        <material-link text="First"/>
-        <material-link text="Second">
-            <material-badge text="1 new" textColor="WHITE"/>
-        </material-link>
-        <material-link text="Third"/>
-    </material-dropdown>
+    <material-Row addStyleNames="code">
+        <material-Title title="Dropdown Properties"/>
+        <blockquote>
+            <p><b>activator</b> - name of your dropdown, a unique name needs for the activator to set it e.g activates='dropdown_name'</p>
+            <p><b>constraintWidth</b> - Does not change width of dropdown to that of the activator</p>
+            <p><b>belowOrigin</b> - displays dropdown below the button</p>
+            <p><b>hover</b> - If sets to true, when you hover to your activator, dropdown component will be shown.</p>
+        </blockquote>
+    </material-Row>
 
-    <material-button activates="dp-5" text="Dropdown5" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT"
-                     textColor="WHITE" >
-    <material-dropdown activator="dp-5" belowOrigin="false" constrainWidth="false">
-        <material-link text="First"/>
-        <material-link text="Second">
-            <material-badge text="1 new" textColor="WHITE"/>
-        </material-link>
-        <material-link text="Third"/>
-    </material-dropdown>
-    </material-button>
+    <material-Row addStyleNames="code">
+        <material-Title title="Introduction" description="Add a dropdown list to any button. Make sure to add the property activates to be able to initialize the dropdown plugin, it will use that as your id on your dropdown menu."/>
+        <!-- Activator -->
+        <material-Button  text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" activates="dp-2"/>
+        <!-- My Drop Down -->
+        <material-DropDown activator="dp-2" constrainWidth="true">
+            <material-Link text="First" />
+            <material-Link text="Second" />
+            <material-Link text="Third" />
+        </material-DropDown>
 
-    <material-navbar width="100%">
-        <material-navbrand text="App Name"/>
-        <material-navsection position="RIGHT">
-            <material-link text="Dropdown" activates="dp-5" textColor="WHITE" iconType="ARROW_DROP_DOWN"
-                           iconPosition="RIGHT">
-            </material-link>
-        </material-navsection>
-    </material-navbar>
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Title title="Introduction" description="Add a dropdown list to any button. Make sure to add the property activates to be able to initialize the dropdown plugin, it will use that as your id on your dropdown menu."/>
+            &lt;!-- Activator -->
+            &lt;material-Button  text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" activates="dp-2"/>
+            &lt;!-- My Drop Down -->
+            &lt;material-DropDown activator="dp-2" constrainWidth="true">
+            &emsp;&lt;material-Link text="First" />
+            &emsp;&lt;material-Link text="Second" />
+            &emsp;&lt;material-Link text="Third" />
+            &lt;/material-DropDown>
+        </pre>
+    </material-Row>
 
-    <material-dropdown activator="dp-5" constrainWidth="true">
-        <material-link waves="DEFAULT" textColor="BLACK" text="Drop 1"/>
-        <material-link waves="DEFAULT" enabled="false" textColor="BLACK" text="Drop 2" separator="true"/>
-        <material-link waves="DEFAULT" textColor="BLACK" text="Drop 3"/>
-    </material-dropdown>
-     
+    <material-Row addStyleNames="code">
+        <material-Title title="Designing" description="You can add divider, waves and color attributes to your dropdown. On items you can use any Material Widgets like MaterialLink, MaterialButton etc. to add it inside the dropdown."/>
+        <!-- Activator -->
+        <material-Button  text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" activates="dp-3"/>
+        <!-- My Drop Down -->
+        <material-DropDown activator="dp-3" constrainWidth="true">
+            <material-Link text="First" iconType="POLYMER" iconPosition="RIGHT" separator="true"/>
+            <material-Link text="Second" iconType="POLYMER" iconPosition="RIGHT" separator="true"/>
+            <material-Link text="Third" iconType="POLYMER" iconPosition="RIGHT" separator="true"/>
+        </material-DropDown>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Title title="Designing" description="You can add divider, waves and color attributes to your dropdown. On items you can use any Material Widgets like MaterialLink, MaterialButton etc. to add it inside the dropdown."/>
+            &lt;!-- Activator -->
+            &lt;material-Button  text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" activates="dp-3"/>
+            &lt;!-- My Drop Down -->
+            &lt;material-DropDown activator="dp-3" constrainWidth="true">
+            &emsp;&lt;material-Link text="First" iconType="POLYMER" iconPosition="RIGHT" separator="true"/>
+            &emsp;&lt;material-Link text="Second" iconType="POLYMER" iconPosition="RIGHT" separator="true"/>
+            &emsp;&lt;material-Link text="Third" iconType="POLYMER" iconPosition="RIGHT" separator="true"/>
+            &lt;/material-DropDown>
+        </pre>
+    </material-Row>
+
+    <material-Panel addStyleNames="code">
+        <material-Title title="Icon Dropdown" />
+        <material-Icon iconType="PHONE" iconColor="BLACK" activates="dp-4" waves="DEFAULT" grid="l2"/>
+
+        <material-DropDown activator="dp-4" constrainWidth="false">
+            <material-Link data-field="linkDialPad" fontSize="0.9em"  width="200px" waves="DEFAULT" textColor="BLACK" iconType="DIALPAD" iconPosition="LEFT" text="Redial" />
+            <material-Link data-field="linkVoicemail" fontSize="0.9em"  width="200px" waves="DEFAULT" enabled="false" textColor="BLACK" iconType="VOICEMAIL" iconPosition="LEFT" text="Check voicemail" separator="true"/>
+            <material-Link data-field="linkNotification" fontSize="0.9em"  width="200px" waves="DEFAULT" textColor="BLACK" iconType="NOTIFICATIONS_OFF" iconPosition="LEFT" text="Disable Notification" />
+        </material-DropDown>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;!-- Activator -->
+            &lt;material-Icon iconType="PHONE" iconColor="BLACK" activates="dp-4" waves="DEFAULT" grid="l2"/>
+            &lt;!-- My Drop Down -->
+            &lt;material-DropDown activator="dp-4" constrainWidth="false">
+            &emsp;&lt;material-Link data-field="linkDialPad" fontSize="0.9em" waves="DEFAULT" textColor="BLACK" iconType="DIALPAD" iconPosition="LEFT" text="Redial" />
+            &emsp;&lt;material-Link data-field="linkVoicemail" fontSize="0.9em" waves="DEFAULT" enabled="false" textColor="BLACK" iconType="VOICEMAIL" iconPosition="LEFT" text="Check voicemail" separator="true"/>
+            &emsp;&lt;material-Link data-field="linkNotification" fontSize="0.9em" waves="DEFAULT" textColor="BLACK" iconType="NOTIFICATIONS_OFF" iconPosition="LEFT" text="Disable Notification" />
+            &lt;/material-DropDown>
+        </pre>
+    </material-Panel>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Dropdown inside NavBar" description="You can now easily integrate an icon or link type dropdown inside navbar."/>
+        <material-NavBar width="100%">
+            <material-NavBrand text="App Name"/>
+            <material-NavSection position="RIGHT">
+                <!--Activator -->
+                <material-Link text="Dropdown" activates="dp-5" textColor="WHITE" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT"/>
+            </material-NavSection>
+        </material-NavBar>
+
+        <!-- My Dropdown -->
+        <material-DropDown activator="dp-5" constrainWidth="true">
+            <material-Link waves="DEFAULT" textColor="BLACK" text="Drop 1" />
+            <material-Link waves="DEFAULT" enabled="false" textColor="BLACK" text="Drop 2"  separator="true"/>
+            <material-Link waves="DEFAULT" textColor="BLACK" text="Drop 3" />
+        </material-DropDown>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-NavBar width="100%">
+            &emsp;&lt;material-NavBrand text="App Name"/><br />
+            &emsp;&lt;material-NavSection position="RIGHT">
+            &emsp;&emsp;&lt;!--Activator -->
+            &emsp;&emsp;&lt;material-Link text="Dropdown" activates="dp-5" textColor="WHITE" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT"/>
+            &emsp;&lt;/material-NavSection>
+            &lt;/material-NavBar><br/>
+
+            &lt;!-- My Dropdown -->
+            &lt;material-DropDown activator="dp-5" constrainWidth="true">
+            &emsp;&lt;material-Link waves="DEFAULT" textColor="BLACK" text="Drop 1" />
+            &emsp;&lt;material-Link waves="DEFAULT" enabled="false" textColor="BLACK" text="Drop 2"  separator="true"/>
+            &emsp;&lt;material-Link waves="DEFAULT" textColor="BLACK" text="Drop 3" />
+            &lt;/material-DropDown>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Selection Event" />
+        <material-Button  text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE" activates="dp-selection"/>
+        <!-- My Drop Down -->
+        <material-DropDown data-field="dropdown" activator="dp-selection" constrainWidth="true">
+            <material-Link text="First" />
+            <material-Link text="Second" />
+            <material-Link text="Third" />
+        </material-DropDown>
+        <pre addStyleNames="lang-java">
+                    dropdown.addSelectionHandler(event ->  MaterialToast.fireToast("Selected : " + ((MaterialLink)event.getSelectedItem()).getText()));
+        <br/>
+        </pre>
+    </material-Row>
+    </g:HTMLPanel>
 </div>

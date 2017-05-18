@@ -1,0 +1,91 @@
+<div>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Material Box" description="Material box is a material design implementation of the Lightbox plugin. When a user clicks on an image that can be enlarged. Material box centers the image and enlarges it in a smooth, non-jarring manner. To dismiss the image, the user can either click on the image again, scroll away, or press the ESC key."/>
+        <material-Image url="http://assets.materialup.com/uploads/0587e4a8-6a46-4e27-b8bf-836e4350fe82/candycons.gif"  type="MATERIALBOXED"/>
+
+        <pre addStyleNames="lang-xml">
+            &lt;material-Image url="http://assets.materialup.com/uploads/0587e4a8-6a46-4e27-b8bf-836e4350fe82/candycons.gif"  type="MATERIALBOXED"/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Captions" description="It is very easy to add a short caption to your photo. Just add the caption as a caption attribute."/>
+        <material-Image url="http://assets.materialup.com/uploads/449089f1-22d5-473f-9de6-59ef04e9de2b/personal-card-material-design-animation.gif"  type="MATERIALBOXED" caption="I love Material Design"/>
+
+        <pre addStyleNames="lang-xml">
+            &lt;material-Image url="http://assets.materialup.com/uploads/449089f1-22d5-473f-9de6-59ef04e9de2b/personal-card-material-design-animation.gif"  type="MATERIALBOXED" caption="I love Material Design"/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Responsive Videos" description="We provide a container for Embedded Videos that resizes them responsively."/>
+        <material-Video url="http://www.youtube.com/embed/Q8TXgCzxEnw?rel=0"/>
+
+        <pre addStyleNames="lang-xml">
+            &lt;material-Video url="http://www.youtube.com/embed/Q8TXgCzxEnw?rel=0"/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Material Slider" description="Our slider is a simple and elegant image carousel. You can also have captions that will be transitioned on their own depending on their alignment. You can also have indicators that show up on the bottom of the slider. Note: This is also Hammer.js compatible! Try swiping with your finger to scroll through the slider."/>
+
+        <material-Slider data-field="slider" fullscreen="false">
+            <material-SlideItem>
+                <material-Image url="http://mayastepien.nl/googlecalendar/google-drinks.jpg"/>
+                <material-SlideCaption textAlign="CENTER">
+                    <material-Title title="This is our big Tagline" description="Here's our small slogan."/>
+                </material-SlideCaption>
+            </material-SlideItem>
+
+            <material-SlideItem>
+                <material-Image url="http://mayastepien.nl/googlecalendar/google-coffee.jpg"/>
+                <material-SlideCaption textAlign="LEFT">
+                    <material-Title title="This is our big Tagline" description="Here's our small slogan."/>
+                </material-SlideCaption>
+            </material-SlideItem>
+
+            <material-SlideItem>
+                <material-Image url="http://mayastepien.nl/googlecalendar/google-skiing.jpg"/>
+                <material-SlideCaption textAlign="RIGHT">
+                    <material-Title title="This is our big Tagline" description="Here's our small slogan."/>
+                </material-SlideCaption>
+            </material-SlideItem>
+
+            <material-SlideItem>
+                <material-Image url="http://mayastepien.nl/googlecalendar/google-manicure.jpg"/>
+                <material-SlideCaption textAlign="CENTER">
+                    <material-Title title="This is our big Tagline" description="Here's our small slogan."/>
+                </material-SlideCaption>
+            </material-SlideItem>
+        </material-Slider>
+
+        <pre addStyleNames="lang-xml">
+            &lt;material-Slider data-field="slider" fullscreen="false">
+            &emsp;&lt;material-SlideItem>
+            &emsp;&emsp;&lt;material-Image url="http://mayastepien.nl/googlecalendar/google-drinks.jpg"/>
+            &emsp;&emsp;&lt;material-SlideCaption textAlign="CENTER">
+            &emsp;&emsp;&emsp;&lt;material-Title title="This is our big Tagline" description="Here's our small slogan."/>
+            &emsp;&emsp;&lt;/material-SlideCaption>
+            &emsp;&lt;/material-SlideItem>
+            &emsp;&lt;--Other Items here -->
+            &lt;/material-Slider>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Material Slider Fullscreen" description="Just add fullscreen='true' on MaterialSlide to make the slider fullscreen"/>
+        <material-Button data-field="fullscreenBtn" text="Fullscreen Slider" waves="LIGHT" iconType="FULLSCREEN" />
+        <pre addStyleNames="lang-xml">
+            &lt;material-Slider data-field="slider" fullscreen="true">
+            &emsp;&lt;material-SlideItem>
+            &emsp;&emsp;&lt;material-Image url="http://mayastepien.nl/googlecalendar/google-drinks.jpg"/>
+            &emsp;&emsp;&lt;material-SlideCaption textAlign="CENTER">
+            &emsp;&emsp;&emsp;&lt;material-Title title="This is our big Tagline" description="Here's our small slogan."/>
+            &emsp;&emsp;&lt;/material-SlideCaption>
+            &emsp;&lt;/material-SlideItem>
+            &emsp;&lt;--Other Items here -->
+            &lt;/material-Slider>
+        </pre>
+    </material-Row>
+</div>

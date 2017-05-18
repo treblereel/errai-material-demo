@@ -1,34 +1,117 @@
 <div data-field="root" id="root">
-    <h1>Collections</h1>
-     <material-Collection>
-     <material-CollectionItem>
-      <material-Link text="Sample 1" >
-       <material-Badge text="1 new" textColor="WHITE"/>
-      </material-Link>
-     </material-CollectionItem>
 
-     <material-CollectionItem>
-      <material-Link text="Sample 2" >
-       <material-Badge text="1 new" textColor="WHITE"/>
-      </material-Link>
-     </material-CollectionItem>
+    <material-Row addStyleNames="code">
+        <material-Title title="Collections"/>
+        <material-Collection>
+            <material-CollectionItem>
+                <material-Link text="Sample 1" >
+                    <material-Badge text="1 new" textColor="WHITE"/>
+                </material-Link>
+            </material-CollectionItem>
+            <material-CollectionItem>
+                <material-Link text="Sample 2" >
+                    <material-Badge text="1 new" textColor="WHITE"/>
+                </material-Link>
+            </material-CollectionItem>
+            <material-CollectionItem><material-Link text="Collecton 3"/></material-CollectionItem>
+            <material-CollectionItem><material-Link text="Collecton 4"/></material-CollectionItem>
+        </material-Collection>
 
-     <material-CollectionItem><material-Link text="Collecton 3"/></material-CollectionItem>
-     <material-CollectionItem><material-Link text="Collecton 4"/></material-CollectionItem>
-     </material-Collection>
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Collection>
 
-    <h1>Badges in NavBar</h1>
-    <material-NavBar>
-         <material-NavSection float="RIGHT">
-          <material-Link text="Link 1" />
-          <material-Link text="Link 2">
-           <material-Badge text="1 new" backgroundColor="red"/>
-          </material-Link>
-          <material-Link text="Link 3" />
-          <material-Link href="#" iconPosition="NONE" iconType="NOTIFICATIONS" layoutPosition="RELATIVE">
-             <material-Badge text="2" backgroundColor="PINK" textColor="WHITE" circle="true"/>
-          </material-Link>
-         </material-NavSection>
-    </material-NavBar>
+            &emsp;&lt;material-CollectionItem>
+            &emsp;&emsp;&lt;material-Link text="Sample 1" >
+            &emsp;&emsp;&emsp;&lt;material-Badge text="1 new" textColor="WHITE"/>
+            &emsp;&emsp;&lt;/material-Link>
+            &emsp;&lt;/material-CollectionItem>
+
+            &emsp;&lt;material-CollectionItem>
+            &emsp;&emsp;&lt;material-Link text="Sample 2" >
+            &emsp;&emsp;&emsp;&lt;material-Badge text="1 new" textColor="WHITE"/>
+            &emsp;&emsp;&lt;/material-Link>
+            &emsp;&lt;/material-CollectionItem>
+
+            &emsp;&lt;material-CollectionItem>&lt;material-Link text="Collecton 3"/>&lt;/material-CollectionItem>
+            &emsp;&lt;material-CollectionItem>&lt;material-Link text="Collecton 4"/>&lt;/material-CollectionItem>
+            &lt;/material-Collection>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Badges in Dropdown"/>
+        <!-- Activator -->
+        <material-Button activates="dp-4" text="Dropdown" iconType="ARROW_DROP_DOWN"
+                          iconPosition="RIGHT" textColor="WHITE"/>
+        <!-- My Drop Down -->
+        <material-DropDown activator="dp-4" belowOrigin="false" constrainWidth="true">
+            <material-Link text="First" />
+            <material-Link text="Second" >
+                <material-Badge text="1 new" textColor="WHITE"/>
+            </material-Link>
+            <material-Link text="Third" />
+        </material-DropDown>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;!-- Activator -->
+            &lt;material-Button activates="dp-4" text="Dropdown" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="WHITE"/>
+            &lt;!-- My Drop Down -->
+            &lt;material-DropDown activator="dp-4" belowOrigin="false" constrainWidth="false" >
+            &emsp;&lt;material-Link text="First" />
+            &emsp;&lt;material-Link text="Second" >
+            &emsp;&emsp;&lt;material-Badge text="1 new" textColor="WHITE"/>
+            &emsp;&lt;/material-Link>
+            &emsp;&lt;material-Link text="Third" />
+            &lt;/material-DropDown>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Badges in NavBar"/>
+        <material-NavBar width="100%">
+            <material-NavSection hideOn="NONE" float="RIGHT">
+                <material-Link text="Link 1" />
+                <material-Link text="Link 2">
+                    <material-Badge text="1 new" backgroundColor="RED"/>
+                </material-Link>
+                <material-Link text="Link 3" />
+            </material-NavSection>
+        </material-NavBar>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-NavBar>
+            &emsp;&lt;material-NavSection float="RIGHT">
+            &emsp;&emsp;&lt;material-Link text="Link 1" />
+            &emsp;&emsp;&lt;material-Link text="Link 2">
+            &emsp;&emsp;&emsp;&lt;material-Badge text="1 new" backgroundColor="red"/>
+            &emsp;&emsp;&lt;/material-Link>
+            &emsp;&emsp;&lt;material-Link text="Link 3" />
+            &emsp;&lt;/material-NavSection>
+            &lt;/material-NavBar>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Circular Badge -->
+        <material-Title title="Circular Badge inside Icon Link"/>
+        <material-NavBar width="100%">
+            <material-NavSection hideOn="NONE" float="LEFT">
+                <!-- Nav Sections with Badge components beside the icon if any -->
+                <material-Link textColor="WHITE" href="#" iconPosition="NONE" iconType="SEARCH" layoutPosition="RELATIVE"/>
+                <material-Link textColor="WHITE" href="#" iconPosition="NONE" iconType="NOTIFICATIONS" layoutPosition="RELATIVE">
+                    <material-Badge text="2" backgroundColor="PINK" textColor="WHITE" circle="true"/>
+                </material-Link>
+                <material-Link textColor="WHITE" href="#" iconPosition="NONE" iconType="BOOKMARK_BORDER" layoutPosition="RELATIVE">
+                    <material-Badge text="21" backgroundColor="PINK" textColor="WHITE" circle="true"/>
+                </material-Link>
+            </material-NavSection>
+        </material-NavBar>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Link href="#" iconPosition="NONE" iconType="NOTIFICATIONS" layoutPosition="RELATIVE">
+            &emsp;&lt;material-Badge text="2" backgroundColor="PINK" textColor="WHITE" circle="true"/>
+            &lt;/material-Link>
+        </pre>
+    </material-Row>
 
 </div>
