@@ -28,27 +28,10 @@
         <errai.version>4.0.0-SNAPSHOT</errai.version>
     </properties>
 
-    <!-- These must be here in this order because of missing guava-gwt snapshots in the JBoss Public Repository. -->
     <repositories>
         <repository>
-            <id>jboss</id>
-            <name>JBoss Public Repo</name>
-            <url>https://repository.jboss.org/nexus/content/groups/public</url>
-        </repository>
-        <repository>
-            <id>google-snapshots</id>
-            <name>Google Snapshots Repo</name>
-            <url>https://oss.sonatype.org/content/repositories/google-snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>sonatype-public</id>
-            <name>Sonatype Public Snapshots Repo</name>
-            <url>https://oss.sonatype.org/content/repositories/public</url>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -106,19 +89,32 @@
         </dependency>
 
         <dependency>
-            <groupId>org.treblereel</groupId>
+            <groupId>com.github.treblereel</groupId>
             <artifactId>errai-material</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>technical_preview-SNAPSHOT</version>
         </dependency>
 
-        <!-- Errai -->
         <dependency>
             <groupId>org.jboss.errai</groupId>
             <artifactId>errai-javaee-all</artifactId>
-            <version>${errai.version}</version>
         </dependency>
 
-        <!-- XXX should we get this for free with chat-javaee-all? -->
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-ui</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-navigation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.errai</groupId>
+            <artifactId>errai-cdi-client</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>org.jboss.spec.javax.ejb</groupId>
             <artifactId>jboss-ejb-api_3.2_spec</artifactId>
@@ -200,7 +196,7 @@
 
                 <configuration>
                     <runTarget>/</runTarget>
-                    <extraJvmArgs>-Xmx1g -Xms756m -XX:CompileThreshold=1000</extraJvmArgs>
+                    <extraJvmArgs>-Xmx2g -Xms756m -XX:CompileThreshold=1000 -Djava.io.tmpdir=${project.build.directory}</extraJvmArgs>
                     <hostedWebapp>src/main/webapp/</hostedWebapp>
                     <logLevel>INFO</logLevel>
                     <strict>true</strict>

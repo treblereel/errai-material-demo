@@ -1,0 +1,52 @@
+<div data-field="root" id="root">
+    <material-Row addStyleNames="code">
+        <material-Title title="Text Only"/>
+        <material-NavBar>
+            <material-Breadcrumb marginLeft="12" text="First"/>
+            <material-Breadcrumb text="Second"/>
+            <material-Breadcrumb text="Third"/>
+        </material-NavBar>
+
+        <pre marginTop="12" addStyleNames="lang-xml">
+            &emsp;&lt;m:MaterialNavBar>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb marginLeft="12" text="First"/>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb text="Second"/>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb text="Third"/>
+            &emsp;&lt;/m:MaterialNavBar>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Only Icons"/>
+        <material-NavBar>
+            <material-Breadcrumb marginLeft="12" iconType="POLYMER"/>
+            <material-Breadcrumb iconType="STAR"/>
+            <material-Breadcrumb iconType="MOTORCYCLE"/>
+        </material-NavBar>
+        
+        <pre marginTop="12" addStyleNames="lang-xml">
+            &emsp;&lt;m:MaterialNavBar>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb marginLeft="12" iconType="POLYMER"/>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb iconType="STAR"/>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb iconType="MOTORCYCLE"/>
+            &lt;/m:MaterialNavBar>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Text with Icons"/>
+        <material-NavBar>
+            <material-Breadcrumb marginLeft="12" iconPosition="LEFT" iconType="POLYMER" text="First"/>
+            <material-Breadcrumb iconPosition="LEFT" iconType="STAR" text="Second"/>
+            <material-Breadcrumb iconPosition="LEFT" iconType="MOTORCYCLE" text="Third"/>
+        </material-NavBar>
+
+        <pre marginTop="12" addStyleNames="lang-xml">
+            &lt;m:MaterialNavBar>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb marginLeft="12" iconPosition="LEFT" iconType="POLYMER" text="First"/>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb iconPosition="LEFT" iconType="STAR" text="Second"/>
+            &emsp;&emsp;&lt;m:MaterialBreadcrumb iconPosition="LEFT" iconType="MOTORCYCLE" text="Third"/>
+            &lt;/m:MaterialNavBar>
+        </pre>
+    </material-Row>
+</div>

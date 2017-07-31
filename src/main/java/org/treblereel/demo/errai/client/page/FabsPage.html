@@ -1,0 +1,138 @@
+<div>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Fixed Action Button" description="If you want a fixed floating action button, you can add multiple actions that will appear on hover. Our demo is in the bottom righthand corner of the page."/>
+        <material-FAB depth="995">
+            <material-Button type="FLOATING" iconType="POLYMER" size="LARGE"/>
+            <material-FABList>
+                <material-AnchorButton type="FLOATING" waves="LIGHT" iconType="POLYMER"/>
+                <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="GREEN"  iconType="POLYMER"/>
+                <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="RED"  iconType="POLYMER"/>
+                <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="ORANGE"  iconType="POLYMER"/>
+                <material-AnchorButton type="FLOATING" waves="LIGHT"  iconType="POLYMER"/>
+            </material-FABList>
+        </material-FAB>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-FAB>
+            &emsp;&lt;material-AnchorButton type="FLOATING" iconType="POLYMER" size="LARGE"/>
+            &emsp;&lt;material-FABList>
+            &emsp;&emsp;&lt;material-AnchorButton type="FLOATING" waves="LIGHT" iconType="POLYMER"/>
+            &emsp;&emsp;&lt;material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="GREEN"  iconType="POLYMER"/>
+            &emsp;&emsp;&lt;material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="RED"  iconType="POLYMER"/>
+            &emsp;&emsp;&lt;material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="ORANGE"  iconType="POLYMER"/>
+            &emsp;&emsp;&lt;material-AnchorButton type="FLOATING" waves="LIGHT"  iconType="POLYMER"/>
+            &emsp;&lt;/material-FABList>
+            &lt;/material-FAB>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Open / Close FAB" description="You can also open the Fixed Action Button Menu programatically."/>
+        <material-Button text="Open" data-field="btnOpen" />
+        <material-Button text="Close" data-field="btnClose" backgroundColor="WHITE" textColor="BLACK"/>
+        <material-Row>
+            <material-Column grid="l6 m6 s12" layoutPosition="RELATIVE" height="80px">
+                <material-FAB data-field="fab" axis="HORIZONTAL" depth="995" layoutPosition="ABSOLUTE" right="0">
+                    <material-Button type="FLOATING" iconType="POLYMER" size="LARGE"/>
+                    <material-FABList>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="GREEN"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="RED"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="ORANGE"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT"  iconType="POLYMER"/>
+                    </material-FABList>
+                </material-FAB>
+            </material-Column>
+        </material-Row>
+
+        <pre addStyleNames="lang-java">
+            &emsp;@Inject @DataField MaterialFAB fab;
+            fab.open();
+            fab.close();
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="FAB Type : Horizontal" description="Creating a horizontal FAB is easy! Just add axis='HORIZONTAL'."/>
+        <material-Row>
+            <material-Column grid="l6 m6 s12" layoutPosition="RELATIVE" height="80px">
+                <material-FAB axis="HORIZONTAL" depth="995" layoutPosition="ABSOLUTE" right="0">
+                    <material-Button type="FLOATING" iconType="POLYMER" size="LARGE"/>
+                    <material-FABList>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="GREEN"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="RED"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="ORANGE"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT"  iconType="POLYMER"/>
+                    </material-FABList>
+                </material-FAB>
+            </material-Column>
+        </material-Row>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-FAB axis="HORIZONTAL">
+            &emsp;&lt;-- Content here -->
+            &lt;/material-FAB>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="FAB Type : Click Only" description="If you want to disable the hover behaviour, and instead toggle the FAB menu when the user clicks on the large button (works great on mobile!), Just add type='CLICK_ONLY' "/>
+        <material-Row>
+            <material-Column grid="l6 m6 s12" layoutPosition="RELATIVE" height="80px">
+                <material-FAB type="CLICK_ONLY" axis="HORIZONTAL" depth="995" layoutPosition="ABSOLUTE" right="0">
+                    <material-Button type="FLOATING" iconType="POLYMER" size="LARGE"/>
+                    <material-FABList>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="GREEN"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="RED"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="ORANGE"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT"  iconType="POLYMER"/>
+                    </material-FABList>
+                </material-FAB>
+            </material-Column>
+        </material-Row>
+
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-FAB type="CLICK_ONLY">
+            &emsp;&lt;-- Content here -->
+            &lt;/material-FAB>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Events" description="We provided Open and Close Events for FAB"/>
+        <material-Row>
+            <material-Column grid="l6 m6 s12" layoutPosition="RELATIVE" height="80px">
+                <material-FAB data-field="btnFABEvent" axis="HORIZONTAL" depth="995" layoutPosition="ABSOLUTE" right="0">
+                    <material-Button type="FLOATING" tooltip="Hover" tooltipPosition="RIGHT" iconType="POLYMER" size="LARGE"/>
+                    <material-FABList>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="GREEN"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="RED"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="ORANGE"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT"  iconType="POLYMER"/>
+                    </material-FABList>
+                </material-FAB>
+                <material-FAB data-field="btnClickOnlyFABEvent" top="80" type="CLICK_ONLY" axis="HORIZONTAL" depth="995" layoutPosition="ABSOLUTE" right="0">
+                    <material-Button type="FLOATING" tooltip="Click" tooltipPosition="RIGHT" backgroundColor="RED" iconType="POLYMER" size="LARGE"/>
+                    <material-FABList>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="GREEN"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="RED"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT" backgroundColor="ORANGE"  iconType="POLYMER"/>
+                        <material-AnchorButton type="FLOATING" waves="LIGHT"  iconType="POLYMER"/>
+                    </material-FABList>
+                </material-FAB>
+            </material-Column>
+        </material-Row>
+        <pre addStyleNames="lang-java" marginTop="100">
+            btnFABEvent.addOpenHandler(openEvent -> MaterialToast.fireToast("Opened Default FAB"));
+            btnFABEvent.addCloseHandler(closeEvent -> MaterialToast.fireToast("Closed Default FAB"));
+            btnClickOnlyFABEvent.addOpenHandler(openEvent -> MaterialToast.fireToast("Opened Click Only FAB"));
+            btnClickOnlyFABEvent.addCloseHandler(closeEvent -> MaterialToast.fireToast("Closed Click Only FAB"));
+        </pre>
+    </material-Row>
+
+</div>

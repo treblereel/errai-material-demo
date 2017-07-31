@@ -4,9 +4,14 @@ import com.google.gwt.user.client.ui.Composite;
 import gwt.material.design.client.constants.Color;
 import gwt.material.design.client.constants.IconType;
 import gwt.material.design.client.constants.TextAlign;
+import gwt.material.design.client.ui.MaterialHeader;
 import gwt.material.design.client.ui.MaterialLink;
 import gwt.material.design.client.ui.MaterialNavBar;
 import gwt.material.design.client.ui.MaterialNavSection;
+import gwt.material.design.client.ui.MaterialRow;
+import gwt.material.design.client.ui.MaterialSideNav;
+import gwt.material.design.client.ui.MaterialSideNavDrawer;
+import gwt.material.design.client.ui.MaterialSideNavPush;
 import gwt.material.design.client.ui.MaterialTooltip;
 import gwt.material.design.client.ui.html.Div;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
@@ -20,35 +25,24 @@ import javax.inject.Inject;
 @Dependent
 public class Header extends Composite {
 
+    @DataField
+    @Inject
+    private MaterialRow root;
+
     @Inject
     @DataField
-    Div header;
+    private MaterialNavBar navBar;
 
     @Inject
-    SideNav sideNav;
+    @DataField
+    private MaterialHeader header;
+
+    @Inject
+    @DataField
+    private MaterialSideNavPush sideBar;
 
     @PostConstruct
-    protected void init() {
-        MaterialNavBar materialNavBar = new MaterialNavBar();
-        materialNavBar.setBackgroundColor(Color.BLUE);
-
-        header.add(materialNavBar);
-
-        MaterialNavSection materialNavSection = new MaterialNavSection();
-        materialNavSection.setTextAlign(TextAlign.RIGHT);
-        materialNavBar.add(materialNavSection);
-
-        MaterialTooltip materialTooltip = new MaterialTooltip();
-
-        MaterialLink materialLink = new MaterialLink();
-        materialLink.setIconType(IconType.MERGE_TYPE);
-        materialLink.setTextColor(Color.WHITE);
-        materialTooltip.add(materialLink);
-        materialNavSection.add(materialTooltip);
-
-
-        materialTooltip.setText("Starter");
-
+    private void init() {
 
     }
 

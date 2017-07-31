@@ -1,6 +1,7 @@
 .idea/
 target/
 .errai/
+src/main/gwt-unitCache
 errai-material-demo.iml
 src/main/webapp/WEB-INF/classes/
-
+src/main/webapp/WEB-INF/lib

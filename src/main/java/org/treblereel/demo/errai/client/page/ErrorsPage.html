@@ -1,0 +1,182 @@
+<div>
+    <material-Row addStyleNames="code">
+        <material-Title title="Usage" description="You can easily set any error or success messages on each  material widget by calling :" />
+        <pre addStyleNames="lang-java">
+            &emsp;txtBox.setError("Please provide your name");
+            txtBox.setSuccess("Your username is available");
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Validation" description="You can add validators and error handlers to input fields." />
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-TextBox data-field="txtBox" label="Email" validateOnBlur="true" allowBlank="false" />
+        </pre>
+        <pre addStyleNames="lang-java">
+            &emsp;public class EmailValidator extends RegExValidator {
+            &emsp;&emsp;public EmailValidator() {
+            &emsp;&emsp;&emsp;&emsp;super("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(?:[a-zA-Z]{2,6})$", "Not a valid email address.");<br/>
+            &emsp;&emsp;}
+            <br/>
+            &emsp;&emsp;@Override
+            &emsp;&emsp;public int getPriority() {
+            &emsp;&emsp;&emsp;&emsp;return 0;
+            &emsp;&emsp;}
+            }
+            <br/>
+            // Add the validator to the input component
+            txtBox.addValidator(new EmailValidator());
+        </pre>
+
+        <material-Row paddingTop="10">
+            <material-TextBox data-field="txtBoxValidator" label="Email" grid="s12 m12 l5" validateOnBlur="true" allowBlank="false"/>
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnValidate" text="Validate" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Allow Blank Property" description="Allow blank property is similar to not required property. By setting allowBlank='false' it means that your field is required." />
+        <material-Row>
+            <material-TextBox data-field="txtBoxValidate" validateOnBlur="true" allowBlank="false" label="Required Value (TextBox)" grid="s12"/>
+            <material-TextArea data-field="txtAreaValidate" validateOnBlur="true" allowBlank="false" label="Required Value (Text Area)" grid="s12"/>
+            <material-IntegerBox data-field="intBoxValidate" validateOnBlur="true" allowBlank="false" label="Required Value (IntegerBox)" grid="s12"/>
+            <material-DoubleBox data-field="doubleBoxValidate" validateOnBlur="true" allowBlank="false" label="Required Value (DoubleBox)" grid="s12"/>
+            <material-FloatBox data-field="floatBoxValidate" validateOnBlur="true" allowBlank="false" label="Required Value (FloatBox)" grid="s12"/>
+            <material-LongBox data-field="longBoxValidate" validateOnBlur="true" allowBlank="false" label="Required Value (LongBox)" grid="s12"/>
+            <material-DatePicker data-field="datePickerValidate" validateOnBlur="true" allowBlank="false" placeholder="Required Value (DatePicker)" grid="s12"/>
+            <MaterialTimePicker data-field="timePickerValidate" validateOnBlur="true" allowBlank="false" placeholder="Required Value (TimePicker)" grid="s12"/>
+            <material-Button data-field="btnValidateAll" text="Validate" waves="LIGHT" />
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Autocomplete -->
+        <material-Row>
+            <material-Title title="Autocomplete"/>
+            <MaterialAutoComplete data-field="acList" placeholder="States" grid="s12 m12 l5"/>
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnError" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccess" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClear" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Date Picker -->
+        <material-Row>
+            <material-Title title="Date Picker"/>
+            <material-DatePicker data-field="dp" placeholder="States" grid="s12 m12 l5"/>
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorDp" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessDp" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearDp" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Time Picker -->
+        <material-Row>
+            <material-Title title="Time Picker" />
+            <MaterialTimePicker placeholder="Time" data-field="tp"  grid="s12 m12 l5" />
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorTime" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessTime" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearTime" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Range -->
+        <material-Row>
+            <material-Title title="Range" />
+            <material-Range min="0" max="100" value="50" data-field="range" grid="s12 m12 l5" />
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorRange" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessRange" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearRange" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Switch -->
+        <material-Row>
+            <material-Title title="Switch" />
+            <material-Switch data-field="sw" grid="s12 m12 l5" />
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorSwitch" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessSwitch" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearSwitch" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Text Area -->
+        <material-Row>
+            <material-Title title="Text Area" />
+            <material-TextArea data-field="txtArea" label="About You" grid="s12 m12 l5" text="I Love Material Design"/>
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorTxtArea" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessTxtArea" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearTxtArea" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- Text Box -->
+        <material-Row>
+            <material-Title title="Text Box" />
+            <material-TextBox data-field="txtBox" label="First Name" grid="s12 m12 l5" text="Marjorie Matias"/>
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorTxtBox" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessTxtBox" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearTxtBox" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- ComboBox -->
+        <material-Row>
+            <material-Title title="Combo Box" />
+            <material-Column grid="s12 m12 l5" >
+                <MaterialComboBox label="Select your choice" data-field="combobox">
+                    <Option text="Option 1"/>
+                    <Option text="Option 2"/>
+                    <Option text="Option 3"/>
+                </MaterialComboBox>
+            </material-Column>
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorComboBox" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessComboBox" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearComboBox" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <!-- ListBox -->
+        <material-Row>
+            <material-Title title="List Box" />
+            <material-Column grid="s12 m12 l5" >
+                <material-ListBox data-field="listBox" placeholder="Select Your choice">
+                    <Option text="Option 1"/>
+                    <Option text="Option 2"/>
+                    <Option text="Option 3"/>
+                </material-ListBox>
+            </material-Column>
+        </material-Row>
+        <material-Row>
+            <material-Button data-field="btnErrorListBox" text="Error" backgroundColor="RED" waves="LIGHT"/>
+            <material-Button data-field="btnSuccessListBox" text="Success" backgroundColor="GREEN" waves="LIGHT"/>
+            <material-Button data-field="btnClearListBox" text="Clear" waves="LIGHT"/>
+        </material-Row>
+    </material-Row>
+</div>

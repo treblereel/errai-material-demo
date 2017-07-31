@@ -1,0 +1,217 @@
+<div>
+    <material-Row addStyleNames="code">
+        <!-- PREREQUISITES -->
+        <material-Title title="Definition" description="First, Define your sidenav inside the navbar component by adding activates='SIDENAV_ID' then on SideNav you will need to set the id : id='SIDENAV_ID'."/>
+        <pre addStyleNames="lang-xml">
+            <material-NavBar backgroundColor="blue" activates="mysidenav"><br/>
+                &emsp;<-- NavBar content here --><br/>
+            </material-NavBar><br/><br/>
+            <material-SideNav id="mysidenav" type="FIXED" width="200" closeOnClick="false"><br/>
+                &emsp;<!-- SideNav Links here --><br/>
+            </material-SideNav><br/>
+        </pre>
+    </material-Row>
+
+    <material-panel addStyleNames="code">
+        <!-- SIDENAV PROPERTIES -->
+        <material-Title title="SideNav Properties"/>
+        <blockquote>
+            <p>width - The width of your desired sidenav</p>
+            <p>id - The Id of your sidenav, required by material navbar component.</p>
+            <p>type - There are 4 Permanent Types (No Nav Menu) [open, float, card, clip] and 2 Persistent Types (With Nav Menu) [close, mini].</p>
+            <p>closeOnClick - If clicked on the sidemenu items it will be automatically closed if set to true.</p>
+            <p>alwaysShowActivator - Stop the side nav from hiding your activator element.</p>
+            <p>allowBodyScroll - Stop the side nav from blocking your body element from scrolling.</p>
+            <p>showOnAttach - Invoke a deferred show call to show your side nav (this isn't always required as some will automatically show).</p>
+        </blockquote>
+    </material-panel>
+
+    <material-Row addStyleNames="code">
+        <!-- FIXED -->
+        <material-Title title="Fixed Type" description="The sidebar will be visible by default on large screen devices. You may require to set your padding-left of your MaterialHeader, MaterialMain and MaterialFooter components based on your SideNav Width "/>
+        <material-Image addStyleNames="z-depth-1" url="https://cloud.githubusercontent.com/assets/3138071/10042710/e988f530-61a1-11e5-8e25-71ab5adf9d12.png"/>
+        <pre addStyleNames="lang-xml">
+            <material-NavBar backgroundColor="blue" activates="mysidebar"><br/>
+                &emsp;<material-NavSection textAlign="RIGHT"><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter">
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/>
+                        &emsp;&emsp;</material-Tooltip>
+                    &emsp;&emsp;<material-Tooltip text="Starter">
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter">
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/>
+                        &emsp;&emsp;</material-Tooltip>
+                    &emsp;</material-NavSection><br/>
+            </material-NavBar><br/><br/>
+
+            <material-SideNav width="300" id="mysidebar" type="FIXED" closeOnClick="false"><br/>
+                &emsp;<material-NavBrand href="#Test">Title</material-NavBrand><br/>
+                &emsp;<material-Link iconType="INBOX" iconPosition="LEFT" textColor="blue"  text="Inbox" /><br/>
+                &emsp;<material-Link iconType="STARS" iconPosition="LEFT" textColor="grey"  text="Starred" /><br/>
+                &emsp;<material-Link iconType="SEND" iconPosition="LEFT" textColor="grey"  text="Sent Mail" /><br/>
+                &emsp;<material-Link iconType="DRAFTS" iconPosition="LEFT" textColor="grey"  text="Drafts" /><br/>
+                &emsp;<material-Link iconType="MARKUNREAD" iconPosition="LEFT" textColor="grey"  text="All Mail" /><br/>
+            </material-SideNav><br/>
+        </pre>
+    </material-Row>
+<!--
+    <material-Row addStyleNames="code">
+        &lt;!&ndash; FIXED type Variations &ndash;&gt;
+        <material-Title title="Fixed Type Variations" description="Fixed type can be displayed floating or clip. We let users to have control on it's design." />
+        <material-Title title="Variation 1 : Floating" />
+        <material-Image url="http://i.imgur.com/fhOn7h4.png" />
+        <pre addStyleNames="lang-xml">
+            &lt;!&ndash; Variation No. 1 - Floating Fixed. &ndash;&gt; <br/>
+            <material-SideNav id="sidenav" type="FIXED" alwaysShowActivator="true" showOnAttach="true" backgroundColor="grey lighten-4" top="68" shadow="0"><br/>
+                &lt;!&ndash; Items here &ndash;&gt;<br/>
+            </material-SideNav>
+        </pre>
+
+        <material-Title title="Variation 2 : Clip" />
+        <material-Image url="http://i.imgur.com/hKKN3Fy.png" />
+        <pre addStyleNames="lang-xml">
+            &lt;!&ndash; Variation No. 2 - Clip Fixed &ndash;&gt;<br/>
+            <material-SideNav id="sidenav" type="FIXED" alwaysShowActivator="true" showOnAttach="true" backgroundColor="white" top="64" shadow="0"><br/>
+                &lt;!&ndash; Items here &ndash;&gt;<br/>
+            </material-SideNav><br/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        &lt;!&ndash; CARD &ndash;&gt;
+        <material-Title title="Card Type" />
+        <material-Image addStyleNames="z-depth-1" url="https://cloud.githubusercontent.com/assets/3138071/10065493/bba5e930-623b-11e5-87c8-79dccfdad431.png"/>
+        <pre addStyleNames="lang-xml">
+            <material-NavBar backgroundColor="blue" activates="mysidebar"><br/>
+                &emsp;<material-NavSection textAlign="RIGHT"><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;</material-NavSection><br/>
+            </material-NavBar><br/><br/>
+
+            <material-SideNav width="300" id="mysidebar" type="CARD" closeOnClick="false"><br/>
+                &emsp;<material-NavBrand href="#Test">Title</material-NavBrand><br/>
+                &emsp;<material-Link iconType="INBOX" iconPosition="LEFT" textColor="blue"  text="Inbox" /><br/>
+                &emsp;<material-Link iconType="STARS" iconPosition="LEFT" textColor="grey"  text="Starred" /><br/>
+                &emsp;<material-Link iconType="SEND" iconPosition="LEFT" textColor="grey"  text="Sent Mail" /><br/>
+                &emsp;<material-Link iconType="DRAFTS" iconPosition="LEFT" textColor="grey"  text="Drafts" /><br/>
+                &emsp;<material-Link iconType="MARKUNREAD" iconPosition="LEFT" textColor="grey"  text="All Mail" /><br/>
+            </material-SideNav><br/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        &lt;!&ndash; MINI &ndash;&gt;
+        <material-Title title="Mini Type" />
+        <material-Image addStyleNames="z-depth-1" url="https://cloud.githubusercontent.com/assets/3138071/10043841/edc85e3e-61aa-11e5-8f78-0ab2e257befd.gif"/>
+        <pre addStyleNames="lang-xml">
+            <material-NavBar backgroundColor="blue" activates="mysidebar"><br/>
+                &emsp;<material-NavSection textAlign="RIGHT"><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;</material-NavSection><br/>
+            </material-NavBar><br/><br/>
+
+            <material-SideNav width="300" id="mysidebar" type="MINI" closeOnClick="false"><br/>
+                &emsp;<material-NavBrand href="#Test">Title</material-NavBrand><br/>
+                &emsp;<material-Icon iconType="INBOX" iconColor="blue"/><br/>
+                &emsp;<material-Icon iconType="STARS" iconColor="blue"/><br/>
+                &emsp;<material-Icon iconType="SEND" iconColor="blue"/><br/>
+                &emsp;<material-Icon iconType="DRAFTS" iconColor="blue"/><br/>
+                &emsp;<material-Icon iconType="MARKUNREAD" iconColor="blue"/><br/>
+            </material-SideNav><br/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        &lt;!&ndash; PUSH &ndash;&gt;
+        <material-Title title="Push Type" />
+        <material-Image addStyleNames="z-depth-1" url="https://cloud.githubusercontent.com/assets/3138071/10043075/f0355e0c-61a4-11e5-8a1c-367a682a8bec.gif"/>
+        <pre addStyleNames="lang-xml">
+            <material-NavBar backgroundColor="blue" activates="mysidebar"><br/>
+                &emsp;<material-NavSection textAlign="RIGHT"><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;&emsp;<material-Tooltip text="Starter"><br/>
+                        &emsp;&emsp;&emsp;<material-Link  iconType="WHATSHOT" textColor="white"/><br/>
+                        &emsp;&emsp;</material-Tooltip><br/>
+                    &emsp;</material-NavSection><br/>
+            </material-NavBar><br/><br/>
+
+            <material-SideNav width="300" id="mysidebar" type="PUSH" closeOnClick="false"><br/>
+                &emsp;<material-NavBrand href="#Test">Title</material-NavBrand><br/>
+                &emsp;<material-Link iconType="INBOX" iconPosition="LEFT" textColor="blue"  text="Inbox" /><br/>
+                &emsp;<material-Link iconType="STARS" iconPosition="LEFT" textColor="grey"  text="Starred" /><br/>
+                &emsp;<material-Link iconType="SEND" iconPosition="LEFT" textColor="grey"  text="Sent Mail" /><br/>
+                &emsp;<material-Link iconType="DRAFTS" iconPosition="LEFT" textColor="grey"  text="Drafts" /><br/>
+                &emsp;<material-Link iconType="MARKUNREAD" iconPosition="LEFT" textColor="grey"  text="All Mail" /><br/>
+            </material-SideNav><br/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        &lt;!&ndash; Collapsible &ndash;&gt;
+        <material-Title title="Collapsible Items" description="Using collapsible component you can add easily a sub menu into your sidenav."/>
+        <pre addStyleNames="lang-xml">
+            &emsp;<material-SideNav ui:field="sideNav" id="sideBar" width="250" type="FIXED" closeOnClick="false"><br/><br/>
+            &emsp;<material-Collapsible><br/><br/>
+                &emsp;&emsp;<material-CollapsibleItem><br/>
+                    &emsp;&emsp;<material-CollapsibleHeader waves="DEFAULT"><br/>
+                        &emsp;&emsp;&emsp;<material-Link text="Style and Layout" iconType="STYLE" textColor="blue"/><br/>
+                        &emsp;&emsp;</material-CollapsibleHeader><br/>
+                    &emsp;&emsp;<material-CollapsibleBody><br/>
+                        &emsp;&emsp;&emsp;<unorderedList><br/>
+                            &emsp;&emsp;&emsp;&emsp;<material-Link targetHistoryToken="{tokens.getColors}" text="Colors" textColor="blue" waves="DEFAULT"/><br/>
+                            &emsp;&emsp;&emsp;&emsp;<material-Link targetHistoryToken="{tokens.getGrid}" text="Grid" textColor="blue" waves="DEFAULT"/><br/>
+                            &emsp;&emsp;&emsp;&emsp;<material-Link targetHistoryToken="{tokens.getHelper}" text="Helper" textColor="blue" waves="DEFAULT"/><br/>
+                            &emsp;&emsp;&emsp;&emsp;<material-Link targetHistoryToken="{tokens.getIcons}" text="Icons" textColor="blue" waves="DEFAULT"/><br/>
+                            &emsp;&emsp;&emsp;&emsp;<material-Link targetHistoryToken="{tokens.getShadow}" text="Shadow" textColor="blue" waves="DEFAULT"/><br/>
+                            &emsp;&emsp;&emsp;&emsp;<material-Link targetHistoryToken="{tokens.getThemes}" text="Theming" textColor="blue" waves="DEFAULT"/><br/>
+                            &emsp;&emsp;&emsp;</unorderedList><br/>
+                        &emsp;&emsp;</material-CollapsibleBody><br/>
+                    &emsp;&emsp;</material-CollapsibleItem><br/><br/>
+                &emsp;</material-Collapsible><br/><br/>
+        </material-SideNav><br/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Profile SideNav" description="Attach in sidenav to indicate the user profile information."/>
+        <material-Image url="https://cloud.githubusercontent.com/assets/3138071/11274662/ccdb1e7c-8f14-11e5-821f-f88eb34ff438.png"/>
+        <pre addStyleNames="lang-xml">
+            &emsp;<material-SideNav type="FIXED" id="sideNav" closeOnClick="false" width="280"><br/>
+            &emsp;<material-SideProfile url="http://static1.squarespace.com/static/51609147e4b0715db61d32b6/521b97cee4b05f031fd12dde/5519e33de4b06a1002802805/1431718693701/?format=1500w"><br/>
+                &emsp;&emsp;<material-Image url="http://b.vimeocdn.com/ps/339/488/3394886_300.jpg" /><br/>
+                &emsp;&emsp;<material-Label text="GWT Material" textColor="white"/><br/>
+                &emsp;&emsp;<material-Link text="gwt-material@gmail.com" activates="dropProfile" iconType="ARROW_DROP_DOWN" iconPosition="RIGHT" textColor="white"/><br/>
+                &emsp;</material-SideProfile><br/>
+        </material-SideNav><br/>
+
+            &lt;!&ndash;Drop down &ndash;&gt;<br/>
+            <material-DropDown activator="dropProfile"><br/>
+                &emsp;<material-Link text="First" iconType="POLYMER" fontSize="1em"/><br/>
+                &emsp;<material-Link text="Second" iconType="POLYMER" fontSize="1em"/><br/>
+                &emsp;<material-Link text="Third" iconType="POLYMER" fontSize="1em"/><br/>
+            </material-DropDown><br/>
+        </pre>
+    </material-Row>-->
+</div>

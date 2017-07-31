@@ -1,0 +1,166 @@
+<div>
+    <material-Row addStyleNames="code">
+        <material-Title title="Circular" />
+        <material-Button text="Show Loader" data-field="btnShowLoader" addStyleNames="{style.btn}"/>
+
+        <pre addStyleNames="lang-java">
+            // Show Loader
+            MaterialLoader.showLoading(true);
+            // Hide Loader
+            MaterialLoader.showLoading(false);
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Linear" />
+        <material-Button text="Show Progress" data-field="btnShowProgress" addStyleNames="{style.btn}"/>
+
+        <pre addStyleNames="lang-java">
+            // Show Progress
+            MaterialLoader.showProgress(true);
+
+            // Hide Progress
+            MaterialLoader.showProgress(false);
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Determinate Type"/>
+        <material-Progress type="DETERMINATE" percent="30"/>
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Progress type="DETERMINATE" percent="30"/>
+        </pre>
+
+        <material-Title title="Indeterminate Type"/>
+        <material-Progress type="INDETERMINATE" />
+        <pre addStyleNames="lang-xml">
+            &emsp;&lt;material-Progress type="INDETERMINATE"/>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Stand alone Loaders" description="Standalone loaders can be added to any place of your app using UiBinder(inside a dialog, a page or everywhere depends on your UI UX)."/>
+        <material-Row>
+            <material-Column grid="l4">
+                <material-PreLoader size="BIG">
+                    <material-Spinner color="BLUE_ONLY" />
+                </material-PreLoader>
+            </material-Column>
+            <material-Column grid="l4">
+                <material-PreLoader>
+                    <material-Spinner color="RED_ONLY" />
+                </material-PreLoader>
+            </material-Column>
+            <material-Column grid="l4">
+                <material-PreLoader size="SMALL">
+                    <material-Spinner color="YELLOW_ONLY" />
+                </material-PreLoader>
+            </material-Column>
+        </material-Row>
+
+        <pre addStyleNames="lang-java">
+            &emsp;&lt;material-PreLoader size="BIG">
+            &emsp;&lt;material-Spinner color="blue-only" />
+            &lt;/material-PreLoader>
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="NavBar Integration" description="Using the progress we can attach it below the nav for better UI / UX when displaying important content on your app."/>
+        <material-Button text="Show Progress" data-field="btnShowNavBarProgress" addStyleNames="{style.btn}"/>
+        <material-NavBar data-field="navBar" addStyleNames="{style.navBar}" width="100%">
+            <material-NavBrand marginLeft="60" href="#Test" float="LEFT" text="Title" />
+            <material-NavSection float="RIGHT">
+                <material-Link iconType="ACCOUNT_CIRCLE" iconPosition="LEFT" text="Account"  textColor="WHITE" waves="LIGHT"/>
+                <material-Link iconType="AUTORENEW" iconPosition="LEFT" text="Refresh" textColor="WHITE" waves="LIGHT"/>
+                <material-Tooltip text ="Menu">
+                    <material-Link iconType="SEARCH" textColor="WHITE" waves="LIGHT"/>
+                </material-Tooltip>
+                <material-Tooltip text ="Starter">
+                    <material-Link iconType="MORE_VERT" textColor="WHITE" waves="LIGHT"/>
+                </material-Tooltip>
+            </material-NavSection>
+        </material-NavBar>
+
+        <pre addStyleNames="lang-java">
+            // Show NavBar Loader
+            navBar.showLoader();
+            // Hide NavBar Loader
+            navBar.hideLoader();
+        </pre>
+    </material-Row>
+
+    <material-Row addStyleNames="code">
+        <material-Title title="Specific Panels" description="You can attach the loader / progress to any panels" />
+        <material-Row>
+            <material-Column grid="l12 m12 s12">
+                <material-Button data-field="btnLoader" text="Show Loader"/>
+                <material-Button data-field="btnProgress" text="Show Progress"/>
+            </material-Column>
+            <material-Column grid="l6 m6 s12">
+                <material-Card>
+                    <material-CardContent padding="0" data-field="cardContent">
+                        <material-Row marginBottom="0" padding="12">
+                            <material-Image url="https://lh3.googleusercontent.com/-Zu_vZFIl9Ms/AAAAAAAAAAI/AAAAAAAAALk/2pPyCa-IKHg/s60-p-rw-no/photo.jpg" width="50" height="50" circle="true" float="LEFT" marginRight="20"/>
+                            <material-Label fontWeight="BOLD" text="Mark Kevin Baldemor" fontSize="1.2em" float="LEFT" marginTop="20"/>
+                            <material-Label text="2d"  textColor="GREY" float="RIGHT" marginTop="20" marginRight="20"/>
+                        </material-Row>
+                        <material-Row marginBottom="0" padding="20">
+                            <material-Label text="Amazingly clear seas of the Philippines" />
+                            <material-Row marginBottom="0">
+                                <material-Chip margin="4" text="#philippines" textColor="BLACK" float="LEFT"/>
+                                <material-Chip margin="4" text="#vacation" textColor="BLACK" float="LEFT"/>
+                                <material-Chip margin="4" text="#holiday" textColor="BLACK" float="LEFT"/>
+                                <material-Chip margin="4" text="#sea" textColor="BLACK" float="LEFT"/>
+                            </material-Row>
+                        </material-Row>
+                    </material-CardContent>
+                    <material-CardImage>
+                        <material-Image url="https://lh3.googleusercontent.com/SgPPF0Bd5hkPRjb36VHPNay8nYGtprFwxSkbHprpZ65TitKXkVOVquPxPdlsoXKHCIdQ=w1366-h768-rw-no" />
+                    </material-CardImage>
+                    <material-CardAction padding="0">
+                        <material-Row margin="12">
+                            <material-Button type="FLOATING" iconType="PLUS_ONE" iconColor="GREY" backgroundColor="GREY_LIGHTEN_2" shadow="0" float="LEFT"/>
+                            <material-Label text="310" textColor="GREY" float="LEFT" marginTop="12" marginLeft="12"/>
+                            <material-Label text="1000" textColor="GREY" float="RIGHT" marginTop="12" marginLeft="12"/>
+                            <material-Button type="FLOATING" iconType="SHARE" iconColor="GREY" backgroundColor="GREY_LIGHTEN_2" shadow="0" float="RIGHT"/>
+                        </material-Row>
+                        <!-- Collection items for comments -->
+                        <material-Collection>
+                            <material-CollectionItem type="AVATAR">
+                                <material-Image url="http://materializecss.com/images/yuna.jpg" circle="true" width="40px" height="40px"/>
+                                <material-Label text="Yuna" fontWeight="BOLD" />
+                                <material-Label text="I grew up in the island of the Philippines. The water is clear. Some are not sandy. Water is just the right temperature." />
+                            </material-CollectionItem>
+                        </material-Collection>
+                    </material-CardAction>
+                </material-Card>
+            </material-Column>
+        </material-Row>
+
+        <pre addStyleNames="lang-java">
+            &emsp;@EventHandler("btnLoader")
+            void onShowLoaderSpecific(ClickEvent e) {
+            &emsp;Timer timer = new Timer() {
+            &emsp;&emsp;@Override
+            &emsp;&emsp;public void run() {
+            &emsp;&emsp;&emsp;MaterialLoader.showLoading(true, cardContent);
+            &emsp;&emsp;}
+            &emsp;};
+            &emsp;timer.schedule(2000);
+            }
+
+            @EventHandler("btnProgress")
+            void onShowProgressSpecific(ClickEvent e) {
+            &emsp;Timer timer = new Timer() {
+            &emsp;&emsp;@Override
+            &emsp;&emsp;public void run() {
+            &emsp;&emsp;&emsp;MaterialLoader.showProgress(true, cardContent);
+            &emsp;&emsp;}
+            &emsp;};
+            &emsp;timer.schedule(2000);
+            }
+        </pre>
+    </material-Row>
+
+</div>

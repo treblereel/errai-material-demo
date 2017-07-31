@@ -1,0 +1,448 @@
+<div>
+
+    <material-row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="TextBox"
+                            description="Text fields allow user input. The border should light up simply and clearly indicating which field the user is currently editing. "/>
+            <material-TextBox label="First Name" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-java">
+                &emsp;&lt;material-title label="First Name" /><br/>
+                &lt;material-textBox label="Email" iconType="ACCOUNT_CIRCLE" /><br/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="TextBox"
+                            description="Text fields allow user input. The border should light up simply and clearly indicating which field the user is currently editing. "/>
+            <material-TextBox label="First Name" grid="s12"/>
+            <material-TextBox label="Email" iconType="ACCOUNT_CIRCLE" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-java">
+                &emsp;// Set Value with firing the value change event
+                range.setValue(20, true);
+                // Set Value without firing the value change event
+                range.setValue(50);
+                range.setValue(50, false);
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Placeholder and Label"
+                            description="There are two types of showing labels to the textbox, the floating inline labels move to float above the field. While the other is called Placeholder or Hint Text which will be hidden once user types on the textbox."/>
+            <material-TextBox label="This is a label" grid="s12"/>
+            <material-TextBox placeholder="This is a placeholder" grid="s12"/>
+            <material-TextBox placeholder="This is an active textbox" label="This is a label" active="true" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-TextBox label="This is a label" grid="s12"/>
+                &lt;material-TextBox placeholder="This is a placeholder" grid="s12"/>
+                &lt;material-TextBox placeholder="This is an active textbox" label="This is a label" active="true" />
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Textarea"
+                            description="Textareas allow larger expandable user input. The border should light up simply and clearly indicating which field the user is currently editing. "/>
+            <material-TextArea label="Content" grid="s12"/>
+            <material-TextArea label="About" iconType="FACE" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-TextArea label="Content" />
+                &lt;material-TextArea data-field="txtArea" label="About" iconType="FACE"/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Textarea"
+                            description="Textareas use a resize policy that can be configured to suit your need. "/>
+            <material-TextArea data-field="txtAreaAuto" label="Using AUTO" resizeRule="AUTO" grid="s12"/>
+
+            <pre addStyleNames="lang-xml">
+                &lt;material-TextArea label="Using AUTO" resizeRule="AUTO"/>
+            </pre>
+
+            <material-TextArea data-field="txtAreaFocus" label="Using FOCUS" resizeRule="FOCUS" grid="s12"/>
+
+            <pre addStyleNames="lang-xml">
+                &lt;material-TextArea label="Using FOCUS" resizeRule="FOCUS"/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Character Counter"
+                            description="Use a character counter in fields where a character restriction is in place."/>
+            <material-TextBox label="Input Text" length="10" grid="s12"/>
+            <material-TextArea label="Text Area" length="120" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-TextBox label="Input Text" length="10"/>
+                &lt;material-TextArea label="Text Area" length="120"/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <!-- MaterialNumber boxes -->
+            <material-Title title="Number Value Box"
+                            description="We provided additional value boxes : Material Float, Integer, Double and Long boxes for specific data format."/>
+            <!-- Float box -->
+            <material-FloatBox data-field="txtFloatBox" label="Float value" grid="s12"/>
+            <!-- Integer box -->
+            <material-IntegerBox data-field="txtIntegerBox" label="Integer value" grid="s12"/>
+            <!-- Double box -->
+            <material-DoubleBox data-field="txtDoubleBox" label="Double value" grid="s12"/>
+            <!-- Long Box -->
+            <material-LongBox data-field="txtLongBox" label="Long value" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-java">
+                &emsp;&lt;!-- MaterialNumber boxes -->
+                &lt;material-Title title="Number Value Box" description="We provided additional value boxes : Material Float, Integer, Double and Long boxes for specific data format." />
+                &lt;!-- Float box -->
+                &lt;material-FloatBox data-field="txtFloatBox" label="Float value"/>
+                &lt;!-- Integer box -->
+                &lt;material-IntegerBox data-field="txtIntegerBox" label="Integer value"/>
+                &lt;!-- Double box -->
+                &lt;material-DoubleBox data-field="txtDoubleBox" label="Double value"/>
+                &lt;!-- Long Box -->
+                &lt;material-LongBox data-field="txtLongBox" label="Long value"/>
+                <br/>
+
+                <!-- Java Usage -->
+                txtFloatBox.setValue(1000.25f);
+                txtIntegerBox.setValue(10);
+                txtDoubleBox.setValue(9999.90);
+                txtLongBox.setValue((long) 1000.00);
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Disabled Styles"
+                            description="You can disable any text field by adding enabled='false'"/>
+            <material-TextBox enabled="false" label="TextBox" grid="s12"/>
+            <material-TextArea enabled="false" label="TextArea" grid="s12"/>
+            <material-FloatBox enabled="false" label="FloatBox" grid="s12"/>
+            <material-IntegerBox enabled="false" label="IntegerBox" grid="s12"/>
+            <material-DoubleBox enabled="false" label="DoubleBox" grid="s12"/>
+            <material-LongBox enabled="false" label="LongBox" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-TextBox enabled="false" label="TextBox" />
+                &lt;material-TextArea enabled="false" label="TextArea" />
+                &lt;material-FloatBox enabled="false" label="FloatBox"/>
+                &lt;material-IntegerBox enabled="false" label="IntegerBox"/>
+                &lt;material-DoubleBox enabled="false" label="DoubleBox"/>
+                &lt;material-LongBox enabled="false" label="LongBox"/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Read Only" description="Easily convert your editable fields to read mode."/>
+            <material-TextBox readOnly="true" text="Some Value" label="TextBox" grid="s12"/>
+            <material-TextArea readOnly="true"
+                               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam mauris, accumsan placerat lectus ac, tincidunt mattis nisl. Ut efficitur massa in libero gravida tincidunt. Vestibulum eget massa eget ex auctor tempus. Aenean vitae augue euismod, lacinia lectus ut, rhoncus enim. Sed vitae laoreet felis, eget ullamcorper nunc. Vivamus elit urna, varius et arcu vel, euismod auctor augue. Praesent scelerisque scelerisque libero sit amet euismod. Mauris eu est at felis feugiat tincidunt eu vel lectus. Ut pretium magna vitae massa sollicitudin, eu tincidunt sapien scelerisque. Maecenas gravida lorem non dui pretium, id vestibulum mi imperdiet. Fusce facilisis, dui nec ultrices molestie, nisi metus bibendum lacus, eget posuere est odio vitae nulla. Mauris laoreet non justo fringilla tempus. Mauris ut risus risus. Vivamus auctor accumsan gravida. Nam venenatis sapien nisl, quis accumsan odio dignissim non. Vestibulum aliquam semper condimentum. Suspendisse a eros elementum, dapibus quam in, aliquet lorem. Morbi mi dui, convallis at luctus ultricies, malesuada at leo. Morbi et turpis a ex vehicula ullamcorper. Vestibulum lacinia, orci eget elementum fermentum, lectus velit interdum erat, sit amet pharetra justo elit in tortor. Suspendisse ac vestibulum nisi.Nunc euismod metus nec elit sollicitudin blandit. Proin eleifend ex bibendum sodales blandit. Vestibulum varius pharetra arcu, sit amet pellentesque odio hendrerit nec. Integer faucibus imperdiet tortor a tempus. Sed accumsan condimentum nisl. Cras interdum sapien quis maximus commodo. Nulla malesuada imperdiet enim, non ornare elit auctor in. Fusce at ipsum eget turpis tincidunt maximus. Nunc sodales tortor nec tincidunt fringilla. Quisque sollicitudin ipsum at dolor faucibus, ultricies convallis ipsum convallis. Donec consequat velit vel molestie tempus. Donec et accumsan lacus, non sollicitudin quam. Morbi arcu lacus, blandit eu lacus nec, finibus tempus ligula."
+                               label="TextArea" grid="s12"/>
+            <material-FloatBox data-field="txtFloatRO" readOnly="true" label="FloatBox" grid="s12"/>
+            <material-IntegerBox data-field="txtIntegerRO" readOnly="true" label="IntegerBox" grid="s12"/>
+            <material-DoubleBox data-field="txtDoubleRO" readOnly="true" label="DoubleBox" grid="s12"/>
+            <material-LongBox data-field="txtLongRO" readOnly="true" label="LongBox" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-TextBox readOnly="true" text="Some Value" label="TextBox" grid="s12"/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Toggle Read Only" description="Toggle your read only fields to editable fields."/>
+            <material-TextBox readOnly="true" toggleReadOnly="true" text="Some Value" label="TextBox" grid="s12"/>
+            <material-TextArea readOnly="true" toggleReadOnly="true"
+                               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam mauris, accumsan placerat lectus ac, tincidunt mattis nisl. Ut efficitur massa in libero gravida tincidunt. Vestibulum eget massa eget ex auctor tempus. Aenean vitae augue euismod, lacinia lectus ut, rhoncus enim. Sed vitae laoreet felis, eget ullamcorper nunc. Vivamus elit urna, varius et arcu vel, euismod auctor augue. Praesent scelerisque scelerisque libero sit amet euismod. Mauris eu est at felis feugiat tincidunt eu vel lectus. Ut pretium magna vitae massa sollicitudin, eu tincidunt sapien scelerisque. Maecenas gravida lorem non dui pretium, id vestibulum mi imperdiet. Fusce facilisis, dui nec ultrices molestie, nisi metus bibendum lacus, eget posuere est odio vitae nulla. Mauris laoreet non justo fringilla tempus. Mauris ut risus risus. Vivamus auctor accumsan gravida. Nam venenatis sapien nisl, quis accumsan odio dignissim non. Vestibulum aliquam semper condimentum. Suspendisse a eros elementum, dapibus quam in, aliquet lorem. Morbi mi dui, convallis at luctus ultricies, malesuada at leo. Morbi et turpis a ex vehicula ullamcorper. Vestibulum lacinia, orci eget elementum fermentum, lectus velit interdum erat, sit amet pharetra justo elit in tortor. Suspendisse ac vestibulum nisi.Nunc euismod metus nec elit sollicitudin blandit. Proin eleifend ex bibendum sodales blandit. Vestibulum varius pharetra arcu, sit amet pellentesque odio hendrerit nec. Integer faucibus imperdiet tortor a tempus. Sed accumsan condimentum nisl. Cras interdum sapien quis maximus commodo. Nulla malesuada imperdiet enim, non ornare elit auctor in. Fusce at ipsum eget turpis tincidunt maximus. Nunc sodales tortor nec tincidunt fringilla. Quisque sollicitudin ipsum at dolor faucibus, ultricies convallis ipsum convallis. Donec consequat velit vel molestie tempus. Donec et accumsan lacus, non sollicitudin quam. Morbi arcu lacus, blandit eu lacus nec, finibus tempus ligula."
+                               label="TextArea" grid="s12"/>
+            <material-FloatBox data-field="txtFloatTRO" readOnly="true" toggleReadOnly="true" label="FloatBox"
+                               grid="s12"/>
+            <material-IntegerBox data-field="txtIntegerTRO" readOnly="true" toggleReadOnly="true" label="IntegerBox"
+                                 grid="s12"/>
+            <material-DoubleBox data-field="txtDoubleTRO" readOnly="true" toggleReadOnly="true" label="DoubleBox"
+                                grid="s12"/>
+            <material-LongBox data-field="txtLongTRO" readOnly="true" toggleReadOnly="true" label="LongBox" grid="s12"/>
+
+            <div style="clear:both;"></div>
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-TextBox readOnly="true" toggleReadOnly="true" text="Some Value" label="TextBox" grid="s12"/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="ValueBox : setValue(value, fireEvents)"/>
+            <material-TextBox data-field="txtBoxValue" text="Some Value" label="TextBox" grid="s12"/>
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnTextBoxValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnTextBoxValueEvent"/>
+            </material-Row>
+            <material-TextArea data-field="txtAreaValue"
+                               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam mauris, accumsan placerat lectus ac, tincidunt mattis nisl. Ut efficitur massa in libero gravida tincidunt. Vestibulum eget massa eget ex auctor tempus. Aenean vitae augue euismod, lacinia lectus ut, rhoncus enim. Sed vitae laoreet felis, eget ullamcorper nunc. Vivamus elit urna, varius et arcu vel, euismod auctor augue. Praesent scelerisque scelerisque libero sit amet euismod. Mauris eu est at felis feugiat tincidunt eu vel lectus. Ut pretium magna vitae massa sollicitudin, eu tincidunt sapien scelerisque. Maecenas gravida lorem non dui pretium, id vestibulum mi imperdiet. Fusce facilisis, dui nec ultrices molestie, nisi metus bibendum lacus, eget posuere est odio vitae nulla. Mauris laoreet non justo fringilla tempus. Mauris ut risus risus. Vivamus auctor accumsan gravida. Nam venenatis sapien nisl, quis accumsan odio dignissim non. Vestibulum aliquam semper condimentum. Suspendisse a eros elementum, dapibus quam in, aliquet lorem. Morbi mi dui, convallis at luctus ultricies, malesuada at leo. Morbi et turpis a ex vehicula ullamcorper. Vestibulum lacinia, orci eget elementum fermentum, lectus velit interdum erat, sit amet pharetra justo elit in tortor. Suspendisse ac vestibulum nisi.Nunc euismod metus nec elit sollicitudin blandit. Proin eleifend ex bibendum sodales blandit. Vestibulum varius pharetra arcu, sit amet pellentesque odio hendrerit nec. Integer faucibus imperdiet tortor a tempus. Sed accumsan condimentum nisl. Cras interdum sapien quis maximus commodo. Nulla malesuada imperdiet enim, non ornare elit auctor in. Fusce at ipsum eget turpis tincidunt maximus. Nunc sodales tortor nec tincidunt fringilla. Quisque sollicitudin ipsum at dolor faucibus, ultricies convallis ipsum convallis. Donec consequat velit vel molestie tempus. Donec et accumsan lacus, non sollicitudin quam. Morbi arcu lacus, blandit eu lacus nec, finibus tempus ligula."
+                               label="TextArea" grid="s12"/>
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnTextAreaValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnTextAreaValueEvent"/>
+            </material-Row>
+            <material-IntegerBox grid="s12" data-field="txtIntegerValue" label="Integer Box"/>
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnTextIntegerValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnTextIntegerValueEvent"/>
+            </material-Row>
+            <material-LongBox grid="s12" data-field="txtLongValue" label="Long Box"/>
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnTextLongValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnTextLongValueEvent"/>
+            </material-Row>
+            <material-DoubleBox grid="s12" data-field="txtDoubleValue" label="Double Box"/>
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnTextDoubleValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnTextDoubleValueEvent"/>
+            </material-Row>
+            <material-FloatBox grid="s12" data-field="txtFloatValue" label="Float Box"/>
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnTextFloatValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnTextFloatValueEvent"/>
+            </material-Row>
+
+            <pre addStyleNames="lang-java">
+                &emsp;// Set Value with firing the value change event
+                valuebox.setValue("Text", true);
+                // Set Value without firing the value change event
+                valuebox.setValue("Text");
+                valuebox.setValue("Text", false);
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="ListBox" description="Select allows user input through specified options."/>
+            <material-label textcolor="red" text=" Old mode is not supported atm, sorry">
+                <material-Row>
+                    <material-ListBox placeholder="ListBox" grid="s12" data-field="lstOptions">
+                        <option text="Option 1"/>
+                        <option text="Option 2"/>
+                        <option text="Option 3"/>
+                        <option text="Option 4"/>
+                    </material-ListBox>
+                </material-Row>
+                <material-Row>
+            <pre addStyleNames="lang-xml">
+                &lt;material-ListBox placeholder="ListBox">
+                &lt;option text="Option 1"/>
+                &lt;option text="Option 2"/>
+                &lt;option text="Option 3"/>
+                &lt;option text="Option 4"/>
+                &lt;/material-ListBox>
+            </pre>
+                </material-Row>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="ListBox : setValue(value, fireEvents)"/>
+            <material-ListBox placeholder="ListBox" grid="s12" data-field="lstSetValue">
+                <option text="Option 1"/>
+                <option text="Option 2"/>
+                <option text="Option 3"/>
+                <option text="Option 4"/>
+            </material-ListBox>
+
+            <material-Button text="Set Value" data-field="btnListBoxValue" marginRight="20"/>
+            <material-Button text="Set Value with Event" data-field="btnListBoxValueEvent"/>
+            <pre addStyleNames="lang-java">
+                &emsp;// Set Value with firing the value change event
+                listbox.setValue(users.get(0), true);
+                // Set Value without firing the value change event
+                listbox.setValue(users.get(1));
+                listbox.setValue(users.get(1), false);
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Disabled Styles"
+                            description="You can also add an attribute disabled='true' to the select element to make the whole thing disabled. Or if you add disabled to the options, the individual options will be unselectable."/>
+            <material-ListBox enabled="false" data-field="lstBoxDisabledStyles">
+                <option text="Option 1"/>
+                <option text="Option 2"/>
+                <option text="Option 3"/>
+                <option text="Option 4"/>
+            </material-ListBox>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Radio Button"
+                            description="Radio Buttons are used when the user must make only one selection out of a group of items"/>
+            <material-RadioButton name="color" text="Red" type="GAP" addStyleNames="block"/>
+            <material-RadioButton name="color" text="Yellow" addStyleNames="block"/>
+            <material-RadioButton name="color" text="Green" addStyleNames="block"/>
+            <material-RadioButton name="color" text="Brown" enabled="false" addStyleNames="block"/>
+
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-RadioButton name="color" text="Red" />
+                &lt;material-RadioButton name="color" text="Yellow" />
+                &lt;material-RadioButton name="color" text="Green" />
+                &lt;material-RadioButton name="color" text="Brown" enabled="false" />
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="RadioButton : setValue(value, fireEvents)"/>
+            <material-RadioButton data-field="radioValue" name="color" text="Radio Button"/>
+
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnRadioValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnRadioValueEvent"/>
+            </material-Row>
+            <pre addStyleNames="lang-java">
+                &emsp;// Set Value with firing the value change event
+                radio.setValue(true, true);
+                // Set Value without firing the value change event
+                radio.setValue(false);
+                radio.setValue(false, false);
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Check Box" description="Checkboxes"/>
+            <material-Row>
+                <material-Column grid="l2">
+                    <material-CheckBox text="Blue" value="true"/>
+                    <material-CheckBox text="Red"/>
+                    <material-CheckBox text="Cyan" value="true" type="FILLED"/>
+                    <material-CheckBox text="Green" value="true" enabled="false"/>
+                    <material-CheckBox text="Brown" enabled="false"/>
+                    <material-CheckBox data-field="cbBox" text="CheckBox 1: true" value="true" type="FILLED"/>
+                </material-Column>
+                <material-Column grid="l2">
+                    <material-CheckBox data-field="cbBoxAll" text="Check all" type="FILLED"/>
+                    <material-CheckBox data-field="cbBlue" text="Blue" type="FILLED"/>
+                    <material-CheckBox data-field="cbRed" text="Red" type="FILLED"/>
+                    <material-CheckBox data-field="cbCyan" text="Cyan" type="FILLED"/>
+                    <material-CheckBox data-field="cbGreen" text="Green" type="FILLED"/>
+                    <material-CheckBox data-field="cbBrown" text="Brown" type="FILLED"/>
+                </material-Column>
+            </material-Row>
+
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-CheckBox text="Blue" value="true" />
+                &lt;material-CheckBox text="Red" />
+                &lt;material-CheckBox text="Cyan" value="true" type="FILLED"/>
+                &lt;material-CheckBox text="Green" value="true" enabled="false"/>
+                &lt;material-CheckBox text="Brown" enabled="false"/>
+                &lt;material-CheckBox data-field="cbBox" text="CheckBox 1: true" value="true" type="FILLED"/>
+            </pre>
+
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-CheckBox data-field="cbBoxAll" text="Check all" type="FILLED"/>
+                &lt;material-CheckBox data-field="cbBlue" text="Blue" type="FILLED" />
+                &lt;material-CheckBox data-field="cbRed" text="Red" type="FILLED"/>
+                &lt;material-CheckBox data-field="cbCyan" text="Cyan" type="FILLED"/>
+                &lt;material-CheckBox data-field="cbGreen" text="Green" type="FILLED"/>
+                &lt;material-CheckBox data-field="cbBrown" text="Brown" type="FILLED"/>
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="CheckBox : setValue(value, fireEvents)"/>
+            <material-CheckBox data-field="cbValue" text="CheckBox"/>
+
+            <material-Row>
+                <material-Button text="Set Value" data-field="btnCbValue" marginRight="20"/>
+                <material-Button text="Set Value with Event" data-field="btnCbValueEvent"/>
+            </material-Row>
+            <pre addStyleNames="lang-java">
+                &emsp;// Set Value with firing the value change event
+                checkBox.setValue(true, true);
+                // Set Value without firing the value change event
+                checkBox.setValue(false);
+                checkBox.setValue(false, false);
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-row>
+                <material-Title title="Switches"/>
+                <material-Switch data-field="switch1" value="true" grid="l0"/>
+                <material-Switch data-field="switch2" value="false" grid="l0"/>
+                <material-Switch enabled="false" value="true" grid="l0"/>
+                <material-Switch enabled="false" grid="l0"/>
+            </material-row>
+            <material-row>
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-Switch data-field="switch1" value="true" grid="l0"/>
+                &lt;material-Switch data-field="switch2" value="false" grid="l0"/>
+                &lt;material-Switch enabled="false" value="true" grid="l0"/>
+                &lt;material-Switch enabled="false" grid="l0"/>
+            </pre>
+            </material-row>
+
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Switch : Value Change Event"/>
+            <material-Switch data-field="switchEvent" onLabel="On" offLabel="Off"/>
+            <material-Row>
+            <pre addStyleNames="lang-java">
+                switchEvent.addValueChangeHandler(event -> {
+                    MaterialToast.fireToast("Value " + switchEvent.getValue());
+                });
+            </pre>
+            </material-Row>
+            <material-Title title="Switch : setValue(value, fireEvents)"/>
+            <material-Switch data-field="switchSetValue" onLabel="On" offLabel="Off"/>
+            <material-Button text="Set Value" data-field="btnSwitchValue" marginRight="20"/>
+            <material-Button text="Set Value with Event" data-field="btnSwitchValueEvent"/>
+            <pre addStyleNames="lang-java">
+                &emsp;// Set Value with firing the value change event
+                mSwitch.setValue(true, true);
+                // Set Value without firing the value change event
+                mSwitch.setValue(true);
+                mSwitch.setValue(true, false);
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Range"/>
+            <material-Range data-field="range" min="10" max="500" value="250"/>
+            <material-Label text="Min: 10"/>
+            <material-Label text="Min: 500"/>
+            <material-Label data-field="lblRange" text="Value: 250" paddingBottom="20"/>
+
+            <pre addStyleNames="lang-xml">
+                &emsp;&lt;material-Range data-field="range" min="10" max="50" value="25"/>
+            </pre>
+
+            <pre addStyleNames="lang-java">
+                &emsp;@EventHandler("range")
+                void onRange(ChangeEvent e) {
+                &emsp;&emsp;lblRange.setText("Value: " + String.valueOf(range.getValue()));
+                }
+            </pre>
+        </material-Row>
+
+        <material-Row addStyleNames="code">
+            <material-Title title="Range : setValue(value, fireEvents)"/>
+            <material-Range data-field="rangeSetValue" min="10" max="500" value="250"/>
+
+            <material-Button text="Set Value" data-field="btnRangeValue" marginRight="20"/>
+            <material-Button text="Set Value with Event" data-field="btnRangeValueEvent"/>
+            <pre addStyleNames="lang-java">
+                &emsp;// Set Value with firing the value change event
+                range.setValue(20, true);
+                // Set Value without firing the value change event
+                range.setValue(50);
+                range.setValue(50, false);
+            </pre>
+        </material-Row>
+    </material-row>
+
+</div>
