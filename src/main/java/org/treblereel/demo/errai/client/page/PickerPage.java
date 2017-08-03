@@ -1,26 +1,22 @@
 package org.treblereel.demo.errai.client.page;
 
 import com.google.gwt.core.client.JsDate;
-import com.google.gwt.event.dom.client.ChangeHandler;
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
-import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.Event;
 import gwt.material.design.client.constants.DatePickerLanguage;
 import gwt.material.design.client.ui.*;
 import gwt.material.design.client.ui.html.Option;
 import org.jboss.errai.ui.nav.client.local.Page;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.EventHandler;
-import org.jboss.errai.ui.shared.api.annotations.ForEvent;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
 import org.slf4j.Logger;
 import org.treblereel.demo.errai.client.utils.DemoUtils;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -29,6 +25,7 @@ import java.util.List;
  * @author Dmitrii Tikhomirov <chani@me.com>
  *         Created by treblereel on 5/16/17.
  */
+@Singleton
 @Templated("#root")
 @Page(path = "pickers")
 public class PickerPage {

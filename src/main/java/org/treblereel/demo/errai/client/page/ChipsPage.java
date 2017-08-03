@@ -1,7 +1,6 @@
 package org.treblereel.demo.errai.client.page;
 
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
 import gwt.material.design.client.ui.MaterialChip;
 import gwt.material.design.client.ui.MaterialToast;
 import org.jboss.errai.ui.nav.client.local.Page;

@@ -1,72 +1,72 @@
 <div>
     <material-Panel addStyleNames="code">
-        <material-Title title="Super Heroes" description="Search icon must activate a search component inside the navbar. See below the guidelines on how to implement it."/>
+        <material-title title="Super Heroes" description="Search icon must activate a search component inside the navbar. See below the guidelines on how to implement it."/>
         <!-- Navbar component that contains a search icon -->
-        <material-NavBar data-field="navBar" paddingLeft="20" width="100%" activates="sideBar" textColor="WHITE">
+        <material-navbar data-field="navBar" paddingLeft="20" width="100%" activates="sideBar" textColor="WHITE">
             <material-NavBrand data-field="navBrand" text="GWT Material"/>
-            <material-Link data-field="btnSearch" iconType="SEARCH" iconColor="WHITE" float="RIGHT"/>
-        </material-NavBar>
+            <material-link data-field="btnSearch" iconType="SEARCH" iconColor="WHITE" float="RIGHT"/>
+        </material-navbar>
 
         <!-- NavBar Search -->
-        <material-NavBar data-field="navBarSearch" width="100%" visible="false">
+        <material-navbar data-field="navBarSearch" width="100%" visible="false">
             <material-Search data-field="txtSearch" placeholder="Component" backgroundColor="WHITE" iconColor="BLACK"  active="true" grid="l3" shadow="1"/>
-        </material-NavBar>
+        </material-navbar>
 
-        <material-Row padding="32" textAlign="CENTER">
-            <material-Column grid="l6 m6 s12" offset="l3 m3 l0">
+        <material-row padding="32" textAlign="CENTER">
+            <material-column grid="l6 m6 s12" offset="l3 m3 l0">
                 <material-Image data-field="imgHero" resource="{res.batman}" circle="true" shadow="1"/>
-                <material-Label data-field="lblName" text="Batman" fontSize="2em"/>
-                <material-Label data-field="lblDescription" text="Batman's secret identity is Bruce Wayne, an American billionaire, playboy, philanthropist, and owner of Wayne Enterprises. After witnessing the murder of his parents as a child, he swore revenge on criminals, an oath tempered by a sense of justice. Wayne trains himself both physically and intellectually and crafts a bat-inspired persona to fight crime."/>
-                <material-Row offset="l3 m3 l0" grid="l6 m6 s12" marginTop="20">
+                <material-label data-field="lblName" text="Batman" fontSize="2em"/>
+                <material-label data-field="lblDescription" text="Batman's secret identity is Bruce Wayne, an American billionaire, playboy, philanthropist, and owner of Wayne Enterprises. After witnessing the murder of his parents as a child, he swore revenge on criminals, an oath tempered by a sense of justice. Wayne trains himself both physically and intellectually and crafts a bat-inspired persona to fight crime."/>
+                <material-row offset="l3 m3 l0" grid="l6 m6 s12" marginTop="20">
                     <material-Icon iconType="STAR" grid="l2 m2 s2" offset="l1" iconColor="AMBER"/>
                     <material-Icon iconType="STAR" grid="l2 m2 s2" iconColor="AMBER"/>
                     <material-Icon iconType="STAR" grid="l2 m2 s2" iconColor="AMBER"/>
                     <material-Icon iconType="STAR" grid="l2 m2 s2" iconColor="AMBER"/>
                     <material-Icon iconType="STAR" grid="l2 m2 s2" iconColor="AMBER"/>
-                </material-Row>
-            </material-Column>
-        </material-Row>
+                </material-row>
+            </material-column>
+        </material-row>
     </material-Panel>
 
-    <material-Row addStyleNames="code">
+    <material-row addStyleNames="code">
         <!-- Code blocks -->
-        <material-Title title="Markup" description="You must add visible='false' property into your navbar search component."/>
+        <material-title title="Markup" description="You must add visible='false' property into your navbar search component."/>
         <pre addStyleNames="lang-xml">
             &emsp;&lt;!-- Navbar component that contains a search icon -->
-            &lt;material-NavBar data-field="navBar" paddingLeft="20" width="100%" backgroundColor="BLUE_DARKEN_2" activates="sideBar" textColor="WHITE">
+            &lt;material-navbar data-field="navBar" paddingLeft="20" width="100%" backgroundColor="BLUE_DARKEN_2" activates="sideBar" textColor="WHITE">
             &emsp;&lt;material-NavBrand data-field="navBrand" text="GWT Material"/>
-            &emsp;&lt;material-Link data-field="btnSearch" iconType="SEARCH" iconColor="WHITE" float="RIGHT"/>
-            &lt;/material-NavBar>
+            &emsp;&lt;material-link data-field="btnSearch" iconType="SEARCH" iconColor="WHITE" float="RIGHT"/>
+            &lt;/material-navbar>
 
             &lt;!-- NavBar Search -->
-            &lt;material-NavBar data-field="navBarSearch" width="100%" visible="false">
+            &lt;material-navbar data-field="navBarSearch" width="100%" visible="false">
             &emsp;&lt;material-Search data-field="txtSearch" placeholder="Component" backgroundColor="WHITE" iconColor="BLACK"  active="true" grid="l3" shadow="1"/>
-            &lt;/material-NavBar>
+            &lt;/material-navbar>
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Open" description="To show the search input field try to call open()." />
+    <material-row addStyleNames="code">
+        <material-title title="Open" description="To show the search input field try to call open()." />
         <pre addStyleNames="lang-java">
             @EventHandler("btnSearch")
             void onSearch(ClickEvent e){
             &emsp;txtSearch.open();
             }
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Open Handler" description="You must specify the event callback after your search is open." />
+    <material-row addStyleNames="code">
+        <material-title title="Open Handler" description="You must specify the event callback after your search is open." />
         <pre addStyleNames="lang-java">
             txtSearch.addOpenHandler(openEvent -> {
             &emsp;navBar.setVisible(false);
             &emsp;navBarSearch.setVisible(true);
             });
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Populating data" description="Take note that we are using Search Object by default to handle the search results. You can also create an object and extend it to Search Object so that you can add your custom attribute e.g Hero." />
+    <material-row addStyleNames="code">
+        <material-title title="Populating data" description="Take note that we are using Search Object by default to handle the search results. You can also create an object and extend it to Search Object so that you can add your custom attribute e.g Hero." />
         <pre addStyleNames="lang-java">
             &emsp;// Populate the search keyword into search component
             List&lt;SearchObject> objects = new ArrayList&lt;>();
@@ -75,10 +75,10 @@
             }
             txtSearch.setListSearches(objects);
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Add Close Handler" description="You can add a logic into your search component."/>
+    <material-row addStyleNames="code">
+        <material-title title="Add Close Handler" description="You can add a logic into your search component."/>
         <pre addStyleNames="lang-java">
             &emsp;// Add Close Handler
             txtSearch.addCloseHandler(new CloseHandler&lt;String>() {
@@ -89,10 +89,10 @@
             &emsp;}
             });
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Add Finish Handler" description="You can add a finish handler into your search component but by default you can just add link value to your search object to set its href attribute."/>
+    <material-row addStyleNames="code">
+        <material-title title="Add Finish Handler" description="You can add a finish handler into your search component but by default you can just add link value to your search object to set its href attribute."/>
         <pre addStyleNames="lang-java">
             &emsp;// Add Finish Handler
             txtSearch.addSearchFinishHandler(new SearchFinishEvent.SearchFinishHandler() {
@@ -106,6 +106,6 @@
             &emsp;}
             });
         </pre>
-    </material-Row>
+    </material-row>
 
 </div>

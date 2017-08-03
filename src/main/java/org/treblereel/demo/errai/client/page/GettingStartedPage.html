@@ -1,0 +1,114 @@
+<div data-field="root">
+
+    <material-Panel addStyleNames="left-align">
+        <material-Panel addStyleNames="code">
+            <material-title title="Setup"
+                            description="You should have a working errai-ui or errai-navigation project. You can find details on how to set it up below http://docs.jboss.org/errai/latest/errai/reference/html_single/ "/>
+        </material-Panel>
+        <material-Panel addStyleNames="code">
+            <material-title title="Maven Repository"
+                            description="Since errai-material wasn't released, we have to use a project jitpack.io to build it from github and use direct dependency declaration"/>
+            <material-row grid="l4">
+                <material-link target="_blank" text="errai-material"
+                               href="https://github.com/treblereel/errai-material/"
+                               iconType="POLYMER" iconPosition="LEFT" textColor="BLUE"/>
+            </material-row>
+            <pre addStyleNames="lang-xml-1">
+                &lt;repositories>
+                    &lt;repository>
+                        &lt;id>jitpack.io</id>
+                        &lt;url>https://jitpack.io</url>
+                    &lt;/repository>
+                &lt;/repositories>
+
+                &lt;dependency>
+                    &lt;groupId>com.github.treblereel&lt;/groupId>
+                    &lt;artifactId>errai-material&lt;/artifactId>
+                    &lt;version>master-SNAPSHOT&lt;/version>
+                &lt;/dependency>
+                 </pre>
+        </material-Panel>
+
+        <material-Panel addStyleNames="code">
+            <material-title title="Configuring your module"
+                            description="You will have to configure your App.gwt.xml file to inherit the Errai-Material Widget widget library. At this point, errai-material contains gwt-material, gwt-material-addins and jquery modules. So all you need is to include only one module, like this : "/>
+            <pre addStyleNames="lang-xml-1">
+               &lt;inherits name="org.jboss.errai.material.Material"/>
+            </pre>
+            <material-label text="... and themes you would like to use :"/>
+                <pre addStyleNames="lang-xml-1">
+
+                    &lt;inherits name="gwt.material.design.themes.ThemeAmberResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemeBlueResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemeBrownResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemeGreenResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemeGreyResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemeOrangeResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemePinkResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemePurpleResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemeRedResources"/>
+                    &lt;inherits name="gwt.material.design.themes.ThemeYellowResources"/>
+                </pre>
+
+        </material-Panel>
+
+        <material-Panel addStyleNames="code">
+            <material-title title="Errai Template usage" description="Assuming that you're using Errai Template, all you need is just to put all your widgets to a template file according to errai documentation. You can also add widget properties inside your tag like this :"/>
+            <pre addStyleNames="lang-xml-1">
+                &lt;material-button margin="8" text="Button" waves="DEFAULT" backgroundColor="WHITE"  textColor="BLACK"/>
+                &lt;material-button margin="8" text="Primary" waves="LIGHT" textColor="WHITE" iconType="POLYMER" iconPosition="LEFT"/>
+                &lt;material-button margin="8" text="Disabled" waves="LIGHT" iconType="POLYMER" iconPosition="RIGHT" enabled="false"/>
+            </pre>
+
+
+            <material-label text="... you can also have widgets inside widgets like this"/>
+            <pre addStyleNames="lang-xml-1">
+                &lt;material-collection>
+                &lt;material-collectionItem>&lt;material-label text="Collecton 1"/>&lt;/material-collectionItem>
+                &lt;material-collectionItem>&lt;material-label text="Collecton 2"/>&lt;/material-collectionItem>
+                &lt;material-collectionItem>&lt;material-label text="Collecton 3"/>&lt;/material-collectionItem>
+                &lt;material-collectionItem>&lt;material-label text="Collecton 4"/>&lt;/material-collectionItem>
+                &lt;/material-collection>
+            </pre>
+
+            <material-label text="in case you need to perform some actions with a widget from code, add data-field property to the tag and add corresponding widget declaration to .java"/>
+            <pre addStyleNames="lang-xml-1">
+
+                 &lt;material-button margin="8" data-field="btnClick" text="Click Me" waves="LIGHT" textColor="WHITE" iconType="POLYMER" iconPosition="LEFT"/>
+
+                    @Inject
+                    @DataField
+                    private MaterialButton btnClick;
+
+                    @EventHandler("btnClick")
+                    void onClick(ClickEvent e) {
+                        MaterialToast.fireToast("Click Triggered");
+                        btnClick.setText("Clicked");
+                    }
+
+            </pre>
+
+
+
+        </material-Panel>
+
+        <material-Panel addStyleNames="code">
+            <material-title title="Responsive Design" description="Add meta tag for responsive design on Mobile devices in your gwt-app.html" />
+            <pre addStyleNames="lang-xml-1">
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+            </pre>
+        </material-Panel>
+
+        <material-row addStyleNames="code">
+            <material-title title="BUGS"/>
+            <blockquote>
+                <p><b>SpyScroll</b> - everythings ok, except of scroll event :) </p>
+                <p><b>PushPin</b> - The same.</p>
+                <p><b>Errai i18n</b> - not implemented</p>
+                <p><b>@DataFields</b> - for id and class properties doesn't implemented</p>
+            </blockquote>
+        </material-row>
+
+
+    </material-Panel>
+</div>

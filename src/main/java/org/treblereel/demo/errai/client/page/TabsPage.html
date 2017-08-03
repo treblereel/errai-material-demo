@@ -1,125 +1,125 @@
 <div>
-    <material-Row addStyleNames="code">
-        <material-Title title="Introduction" description="You can add a Label as a Tab Item and for contents any Material Widget can be added as a Tab Content (e.g MaterialTopNav)"/>
+    <material-row addStyleNames="code">
+        <material-title title="Introduction" description="You can add a Label as a Tab Item and for contents any Material Widget can be added as a Tab Content (e.g MaterialTopNav)"/>
 
-        <material-Row>
-            <material-Column grid="s12">
+        <material-row>
+            <material-column grid="s12">
                 <material-Tab data-field="tab">
                     <material-TabItem waves="YELLOW">
-                        <material-Link text="Tab 1" href="#tab1" textColor="WHITE"/>
+                        <material-link text="Tab 1" href="#tab1" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW">
-                        <material-Link text="Tab 2" href="#tab2" textColor="WHITE"/>
+                        <material-link text="Tab 2" href="#tab2" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW">
-                        <material-Link text="Tab 3" href="#tab3" textColor="WHITE"/>
+                        <material-link text="Tab 3" href="#tab3" textColor="WHITE"/>
                     </material-TabItem>
                 </material-Tab>
-            </material-Column>
+            </material-column>
 
-            <material-Column id="tab1" grid="s12">
-                <material-Label text="Tab 1 Content"/>
-            </material-Column>
-            <material-Column id="tab2" grid="s12">
-                <material-Label text="Tab 2 Content"/>
-            </material-Column>
-            <material-Column id="tab3" grid="s12">
-                <material-Label text="Tab 3 Content"/>
-            </material-Column>
-        </material-Row>
+            <material-column id="tab1" grid="s12">
+                <material-label text="Tab 1 Content"/>
+            </material-column>
+            <material-column id="tab2" grid="s12">
+                <material-label text="Tab 2 Content"/>
+            </material-column>
+            <material-column id="tab3" grid="s12">
+                <material-label text="Tab 3 Content"/>
+            </material-column>
+        </material-row>
 
         <pre addStyleNames="lang-xml">
-            &emsp;&lt;material-Row>
-            &emsp;&lt;material-Column grid="s12">
+            &emsp;&lt;material-row>
+            &emsp;&lt;material-column grid="s12">
             &emsp;&emsp;&lt;material-Tab ui:field="tab" indicatorColor="YELLOW">
             &emsp;&emsp;&emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&emsp;&emsp;&lt;material-Link text="Tab 1" href="#tab1" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&emsp;&lt;material-link text="Tab 1" href="#tab1" textColor="WHITE"/>
             &emsp;&emsp;&emsp;&lt;/material-TabItem>
             &emsp;&emsp;&emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&emsp;&emsp;&lt;material-Link text="Tab 2" href="#tab2" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&emsp;&lt;material-link text="Tab 2" href="#tab2" textColor="WHITE"/>
             &emsp;&emsp;&emsp;&lt;/material-TabItem>
             &emsp;&emsp;&emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&emsp;&emsp;&lt;material-Link text="Tab 3" href="#tab3" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&emsp;&lt;material-link text="Tab 3" href="#tab3" textColor="WHITE"/>
             &emsp;&emsp;&emsp;&lt;/material-TabItem>
             &emsp;&emsp;&lt;/material-Tab>
-            &emsp;&lt;/material-Column>
+            &emsp;&lt;/material-column>
 
-            &emsp;&lt;material-Column m:id="tab1" grid="s12">
-            &emsp;&emsp;&lt;material-Label text="Tab 1 Content"/>
-            &emsp;&lt;/material-Column>
-            &emsp;&lt;material-Column m:id="tab2" grid="s12">
-            &emsp;&emsp;&lt;material-Label text="Tab 2 Content"/>
-            &emsp;&lt;/material-Column>
-            &emsp;&lt;material-Column m:id="tab3" grid="s12">
-            &emsp;&emsp;&lt;material-Label text="Tab 3 Content"/>
-            &emsp;&lt;/material-Column>
-            &lt;/material-Row>
+            &emsp;&lt;material-column m:id="tab1" grid="s12">
+            &emsp;&emsp;&lt;material-label text="Tab 1 Content"/>
+            &emsp;&lt;/material-column>
+            &emsp;&lt;material-column m:id="tab2" grid="s12">
+            &emsp;&emsp;&lt;material-label text="Tab 2 Content"/>
+            &emsp;&lt;/material-column>
+            &emsp;&lt;material-column m:id="tab3" grid="s12">
+            &emsp;&emsp;&lt;material-label text="Tab 3 Content"/>
+            &emsp;&lt;/material-column>
+            &lt;/material-row>
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Disabled Tab Item" />
-        <material-Row>
-            <material-Column grid="s12">
+    <material-row addStyleNames="code">
+        <material-title title="Disabled Tab Item" />
+        <material-row>
+            <material-column grid="s12">
                 <material-Tab type="ICON" shadow="1">
                     <material-TabItem grid="s4">
-                        <material-Link iconType="PHONE" text="Recents" href="#tab51" textColor="WHITE"/>
+                        <material-link iconType="PHONE" text="Recents" href="#tab51" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem enabled="false" waves="YELLOW" grid="s4">
-                        <material-Link iconType="FAVORITE" text="Favorites" href="#tab52" textColor="WHITE"/>
+                        <material-link iconType="FAVORITE" text="Favorites" href="#tab52" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link iconType="NEAR_ME" text="NearBy" href="#tab53" textColor="WHITE"/>
+                        <material-link iconType="NEAR_ME" text="NearBy" href="#tab53" textColor="WHITE"/>
                     </material-TabItem>
                 </material-Tab>
 
-                <material-Column id="tab51" grid="s12">
-                    <material-Label text="Tab 1 Content"/>
-                </material-Column>
-                <material-Column id="tab52" grid="s12">
-                    <material-Label text="Tab 2 Content"/>
-                </material-Column>
-                <material-Column id="tab53" grid="s12">
-                    <material-Label text="Tab 3 Content"/>
-                </material-Column>
-            </material-Column>
-        </material-Row>
+                <material-column id="tab51" grid="s12">
+                    <material-label text="Tab 1 Content"/>
+                </material-column>
+                <material-column id="tab52" grid="s12">
+                    <material-label text="Tab 2 Content"/>
+                </material-column>
+                <material-column id="tab53" grid="s12">
+                    <material-label text="Tab 3 Content"/>
+                </material-column>
+            </material-column>
+        </material-row>
 
         <pre addStyleNames="lang-xml">
             &emsp;&lt;material-TabItem enabled="false" waves="YELLOW" grid="s4">
-            &emsp;&lt;material-Link iconType="FAVORITE" text="Favorites" href="#tab52" textColor="WHITE"/>
+            &emsp;&lt;material-link iconType="FAVORITE" text="Favorites" href="#tab52" textColor="WHITE"/>
             &lt;/material-TabItem>
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Set Tab Index Method" description="By calling this method, you can easily preselect a tab index. Note the index will start at 1."/>
+    <material-row addStyleNames="code">
+        <material-title title="Set Tab Index Method" description="By calling this method, you can easily preselect a tab index. Note the index will start at 1."/>
 
-        <material-Row addStyleNames="code">
-            <material-Column grid="s12">
+        <material-row addStyleNames="code">
+            <material-column grid="s12">
                 <material-tab data-field="tab2" indicatorColor="YELLOW">
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link text="Tab 1" href="#tab21" textColor="WHITE"/>
+                        <material-link text="Tab 1" href="#tab21" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link text="Tab 2" href="#tab22" textColor="WHITE"/>
+                        <material-link text="Tab 2" href="#tab22" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link text="Tab 3" href="#tab23" textColor="WHITE"/>
+                        <material-link text="Tab 3" href="#tab23" textColor="WHITE"/>
                     </material-TabItem>
                 </material-tab>
-            </material-Column>
+            </material-column>
 
-            <material-Column id="tab21" grid="s12">
-                <material-Label text="Tab 1 Content"/>
-            </material-Column>
-            <material-Column id="tab22" grid="s12">
-                <material-Label text="Tab 2 Content"/>
-            </material-Column>
-            <material-Column id="tab23" grid="s12">
-                <material-Label text="Tab 3 Content"/>
-            </material-Column>
-        </material-Row>
+            <material-column id="tab21" grid="s12">
+                <material-label text="Tab 1 Content"/>
+            </material-column>
+            <material-column id="tab22" grid="s12">
+                <material-label text="Tab 2 Content"/>
+            </material-column>
+            <material-column id="tab23" grid="s12">
+                <material-label text="Tab 3 Content"/>
+            </material-column>
+        </material-row>
 
         <pre addStyleNames="lang-java">
             &emsp;@Inject @DatField MaterialTabs tab;
@@ -127,141 +127,141 @@
             &emsp;tab.setTabIndex(1);
             }
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Tabs with Icons" description="You can add icons by setting the type='ICON' on MaterialTab.">
-            <material-Row>
-                <material-Column grid="s12">
+    <material-row addStyleNames="code">
+        <material-title title="Tabs with Icons" description="You can add icons by setting the type='ICON' on MaterialTab.">
+            <material-row>
+                <material-column grid="s12">
                     <material-Tab shadow="1" type="ICON" indicatorColor="YELLOW">
                         <material-TabItem waves="YELLOW" grid="s4">
-                            <material-Link iconType="PHONE" text="Recents" href="#tab31" textColor="WHITE"/>
+                            <material-link iconType="PHONE" text="Recents" href="#tab31" textColor="WHITE"/>
                         </material-TabItem>
                         <material-TabItem waves="YELLOW" grid="s4">
-                            <material-Link iconType="FAVORITE" text="Favorites" href="#tab32" textColor="WHITE"/>
+                            <material-link iconType="FAVORITE" text="Favorites" href="#tab32" textColor="WHITE"/>
                         </material-TabItem>
                         <material-TabItem waves="YELLOW" grid="s4">
-                            <material-Link iconType="NEAR_ME" text="NearBy" href="#tab33" textColor="WHITE"/>
+                            <material-link iconType="NEAR_ME" text="NearBy" href="#tab33" textColor="WHITE"/>
                         </material-TabItem>
                     </material-Tab>
-                </material-Column>
+                </material-column>
 
-                <material-Column id="tab31" grid="s12">
-                    <material-Label text="Tab 1 Content"/>
-                </material-Column>
-                <material-Column id="tab32" grid="s12">
-                    <material-Label text="Tab 2 Content"/>
-                </material-Column>
-                <material-Column id="tab33" grid="s12">
-                    <material-Label text="Tab 3 Content"/>
-                </material-Column>
-            </material-Row>
-        </material-Title>
+                <material-column id="tab31" grid="s12">
+                    <material-label text="Tab 1 Content"/>
+                </material-column>
+                <material-column id="tab32" grid="s12">
+                    <material-label text="Tab 2 Content"/>
+                </material-column>
+                <material-column id="tab33" grid="s12">
+                    <material-label text="Tab 3 Content"/>
+                </material-column>
+            </material-row>
+        </material-title>
 
         <pre addStyleNames="lang-xml">
             &emsp;&lt;material-Tab type="ICON" shadow="1" indicatorColor="YELLOW">
             &emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&lt;material-Link iconType="PHONE" text="Recents" href="#tab31" textColor="WHITE"/>
+            &emsp;&emsp;&lt;material-link iconType="PHONE" text="Recents" href="#tab31" textColor="WHITE"/>
             &emsp;&lt;/material-TabItem>
             &emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&lt;material-Link iconType="FAVORITE" text="Favorites" href="#tab32" textColor="WHITE"/>
+            &emsp;&emsp;&lt;material-link iconType="FAVORITE" text="Favorites" href="#tab32" textColor="WHITE"/>
             &emsp;&lt;/material-TabItem>
             &emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&lt;material-Link iconType="NEAR_ME" text="NearBy" href="#tab33" textColor="WHITE"/>
+            &emsp;&emsp;&lt;material-link iconType="NEAR_ME" text="NearBy" href="#tab33" textColor="WHITE"/>
             &emsp;&lt;/material-TabItem>
             &lt;/material-Tab>
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Changing Indicator Color"/>
-        <material-Row>
-            <material-Column grid="s12">
+    <material-row addStyleNames="code">
+        <material-title title="Changing Indicator Color"/>
+        <material-row>
+            <material-column grid="s12">
                 <material-Tab type="ICON" shadow="1" backgroundColor="GREEN" indicatorColor="GREEN_LIGHTEN_3">
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link iconType="PHONE" text="Recents" href="#tab41" textColor="WHITE"/>
+                        <material-link iconType="PHONE" text="Recents" href="#tab41" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link iconType="FAVORITE" text="Favorites" href="#tab42" textColor="WHITE"/>
+                        <material-link iconType="FAVORITE" text="Favorites" href="#tab42" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link iconType="NEAR_ME" text="NearBy" href="#tab43" textColor="WHITE"/>
+                        <material-link iconType="NEAR_ME" text="NearBy" href="#tab43" textColor="WHITE"/>
                     </material-TabItem>
                 </material-Tab>
-            </material-Column>
+            </material-column>
 
-            <material-Column id="tab41" grid="s12">
-                <material-Label text="Tab 1 Content"/>
-            </material-Column>
-            <material-Column id="tab42" grid="s12">
-                <material-Label text="Tab 2 Content"/>
-            </material-Column>
-            <material-Column id="tab43" grid="s12">
-                <material-Label text="Tab 3 Content"/>
-            </material-Column>
-        </material-Row>
+            <material-column id="tab41" grid="s12">
+                <material-label text="Tab 1 Content"/>
+            </material-column>
+            <material-column id="tab42" grid="s12">
+                <material-label text="Tab 2 Content"/>
+            </material-column>
+            <material-column id="tab43" grid="s12">
+                <material-label text="Tab 3 Content"/>
+            </material-column>
+        </material-row>
 
         <pre addStyleNames="lang-xml">
             &lt;material-Tab type="ICON" shadow="1" backgroundColor="GREEN" indicatorColor="GREEN_LIGHTEN_3" waves="YELLOW">
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Selection Event" description="We have provided a selection event to easily get the selected index." />
-        <material-Column grid="s12">
+    <material-row addStyleNames="code">
+        <material-title title="Selection Event" description="We have provided a selection event to easily get the selected index." />
+        <material-column grid="s12">
             <material-Tab data-field="eventTab">
                 <material-TabItem waves="YELLOW" grid="s4">
-                    <material-Link text="Tab 1" href="#tab1" textColor="WHITE"/>
+                    <material-link text="Tab 1" href="#tab1" textColor="WHITE"/>
                 </material-TabItem>
                 <material-TabItem waves="YELLOW" grid="s4">
-                    <material-Link text="Tab 2" href="#tab2" textColor="WHITE"/>
+                    <material-link text="Tab 2" href="#tab2" textColor="WHITE"/>
                 </material-TabItem>
                 <material-TabItem waves="YELLOW" grid="s4">
-                    <material-Link text="Tab 3" href="#tab3" textColor="WHITE"/>
+                    <material-link text="Tab 3" href="#tab3" textColor="WHITE"/>
                 </material-TabItem>
             </material-Tab>
 
             <pre addStyleNames="lang-java">
                 eventTab.addSelectionHandler(selectionEvent -> MaterialToast.fireToast(selectionEvent.getSelectedItem() + " Selected Index"));
             </pre>
-        </material-Column>
-    </material-Row>
+        </material-column>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Controlling the width of Tabs" description="By wrapping tabs into columns you canset it's grid."/>
-        <material-Row backgroundColor="GREEN" shadow="1">
-            <material-Column grid="l4 m6 s12">
+    <material-row addStyleNames="code">
+        <material-title title="Controlling the width of Tabs" description="By wrapping tabs into columns you canset it's grid."/>
+        <material-row backgroundColor="GREEN" shadow="1">
+            <material-column grid="l4 m6 s12">
                 <material-Tab type="ICON" backgroundColor="GREEN" indicatorColor="GREEN_LIGHTEN_3">
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link text="Recents" href="#tab41" textColor="WHITE"/>
+                        <material-link text="Recents" href="#tab41" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link text="Favorites" href="#tab42" textColor="WHITE"/>
+                        <material-link text="Favorites" href="#tab42" textColor="WHITE"/>
                     </material-TabItem>
                     <material-TabItem waves="YELLOW" grid="s4">
-                        <material-Link text="NearBy" href="#tab43" textColor="WHITE"/>
+                        <material-link text="NearBy" href="#tab43" textColor="WHITE"/>
                     </material-TabItem>
                 </material-Tab>
-            </material-Column>
-        </material-Row>
+            </material-column>
+        </material-row>
 
         <pre addStyleNames="lang-xml">
-            &emsp;&lt;material-Row backgroundColor="GREEN" shadow="1">
-            &emsp;&lt;material-Column grid="l4 m6 s12">
+            &emsp;&lt;material-row backgroundColor="GREEN" shadow="1">
+            &emsp;&lt;material-column grid="l4 m6 s12">
             &emsp;&emsp;&lt;material-Tab type="ICON" backgroundColor="GREEN" indicatorColor="GREEN_LIGHTEN_3">
             &emsp;&emsp;&emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&emsp;&emsp;&lt;material-Link text="Recents" href="#tab41" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&emsp;&lt;material-link text="Recents" href="#tab41" textColor="WHITE"/>
             &emsp;&emsp;&emsp;&lt;/material-TabItem>
             &emsp;&emsp;&emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&emsp;&emsp;&lt;material-Link text="Favorites" href="#tab42" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&emsp;&lt;material-link text="Favorites" href="#tab42" textColor="WHITE"/>
             &emsp;&emsp;&emsp;&lt;/material-TabItem>
             &emsp;&emsp;&emsp;&lt;material-TabItem waves="YELLOW" grid="s4">
-            &emsp;&emsp;&emsp;&emsp;&lt;material-Link text="NearBy" href="#tab43" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&emsp;&lt;material-link text="NearBy" href="#tab43" textColor="WHITE"/>
             &emsp;&emsp;&emsp;&lt;/material-TabItem>
             &emsp;&emsp;&lt;/material-Tab>
-            &emsp;&lt;/material-Column>
-            &lt;/material-Row>
+            &emsp;&lt;/material-column>
+            &lt;/material-row>
         </pre>
-    </material-Row>
+    </material-row>
 
 </div>

@@ -1,10 +1,8 @@
 package org.treblereel.demo.errai.client.page;
 
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import gwt.material.design.client.constants.Color;
 import gwt.material.design.client.ui.*;
-import gwt.material.design.client.ui.html.Label;
 import org.jboss.errai.ui.nav.client.local.Page;
 import org.jboss.errai.ui.shared.api.annotations.DataField;
 import org.jboss.errai.ui.shared.api.annotations.EventHandler;

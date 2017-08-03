@@ -1,7 +1,6 @@
 package org.treblereel.demo.errai.client.page;
 
 import com.google.gwt.user.client.ui.Composite;
-import gwt.material.design.client.ui.MaterialCollapsible;
 import org.jboss.errai.ui.nav.client.local.Page;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
 

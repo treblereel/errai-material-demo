@@ -1,7 +1,6 @@
 package org.treblereel.demo.errai.client.page;
 
 import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.uibinder.client.UiHandler;
 import gwt.material.design.client.base.SearchObject;
 import gwt.material.design.client.ui.*;
 import gwt.material.design.client.ui.animate.MaterialAnimator;
