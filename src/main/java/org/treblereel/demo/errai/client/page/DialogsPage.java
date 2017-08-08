@@ -13,11 +13,13 @@ import org.jboss.errai.ui.shared.api.annotations.Templated;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * @author Dmitrii Tikhomirov <chani@me.com>
  *         Created by treblereel on 5/19/17.
  */
+@Singleton
 @Templated
 @Page(path = "dialogs")
 public class DialogsPage {

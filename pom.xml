@@ -94,6 +94,12 @@
             <version>technical_preview-SNAPSHOT</version>
         </dependency>
 
+<!--        <dependency>
+            <groupId>org.treblereel</groupId>
+            <artifactId>errai-material</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>-->
+
         <dependency>
             <groupId>org.jboss.errai</groupId>
             <artifactId>errai-javaee-all</artifactId>

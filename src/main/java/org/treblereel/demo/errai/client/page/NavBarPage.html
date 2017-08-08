@@ -1,136 +1,136 @@
 <div>
-    <material-Row addStyleNames="code">
-        <material-Title title="Links ,Icons, and Waves" description="Based on material links you can add icons, link with icons or link only and apply ripple effect by adding waves attribute."/>
-        <material-NavBar width="100%">
+    <material-row addStyleNames="code">
+        <material-title title="Links ,Icons, and Waves" description="Based on material links you can add icons, link with icons or link only and apply ripple effect by adding waves attribute."/>
+        <material-navbar width="100%">
             <material-NavBrand marginLeft="60" href="#Test" float="LEFT" text="Title" />
-            <material-NavSection float="RIGHT">
-                <material-Link iconType="ACCOUNT_CIRCLE" iconPosition="LEFT" text="Account"  textColor="WHITE" waves="LIGHT"/>
-                <material-Link iconType="AUTORENEW" iconPosition="LEFT" text="Refresh" textColor="WHITE" waves="LIGHT"/>
+            <material-navsection float="RIGHT">
+                <material-link iconType="ACCOUNT_CIRCLE" iconPosition="LEFT" text="Account"  textColor="WHITE" waves="LIGHT"/>
+                <material-link iconType="AUTORENEW" iconPosition="LEFT" text="Refresh" textColor="WHITE" waves="LIGHT"/>
                 <material-Tooltip text="Menu">
-                    <material-Link iconType="SEARCH" textColor="WHITE" waves="LIGHT"/>
+                    <material-link iconType="SEARCH" textColor="WHITE" waves="LIGHT"/>
                 </material-Tooltip>
                 <material-Tooltip text="Starter">
-                    <material-Link iconType="MORE_VERT" textColor="WHITE" waves="LIGHT"/>
+                    <material-link iconType="MORE_VERT" textColor="WHITE" waves="LIGHT"/>
                 </material-Tooltip>
-            </material-NavSection>
-        </material-NavBar>
+            </material-navsection>
+        </material-navbar>
 
         <pre addStyleNames="lang-xml">
-            &emsp;&lt;material-NavBar width="100%">
+            &emsp;&lt;material-navbar width="100%">
             &emsp;&lt;material-NavBrand href="#Test" float="LEFT" text="App Title"/>
-            &emsp;&lt;material-NavSection float="RIGHT">
-            &emsp;&emsp;&lt;material-Link iconType="ACCOUNT_CIRCLE" iconPosition="LEFT" text="Account"  textColor="WHITE" waves="LIGHT"/>
-            &emsp;&emsp;&lt;material-Link iconType="AUTORENEW" iconPosition="LEFT" text="Refresh" textColor="WHITE" waves="LIGHT"/>
+            &emsp;&lt;material-navsection float="RIGHT">
+            &emsp;&emsp;&lt;material-link iconType="ACCOUNT_CIRCLE" iconPosition="LEFT" text="Account"  textColor="WHITE" waves="LIGHT"/>
+            &emsp;&emsp;&lt;material-link iconType="AUTORENEW" iconPosition="LEFT" text="Refresh" textColor="WHITE" waves="LIGHT"/>
             &emsp;&emsp;&lt;material-Tooltip text="Menu">
-            &emsp;&emsp;&emsp;&lt;material-Link iconType="SEARCH" textColor="WHITE" waves="LIGHT"/>
+            &emsp;&emsp;&emsp;&lt;material-link iconType="SEARCH" textColor="WHITE" waves="LIGHT"/>
             &emsp;&emsp;&lt;/material-Tooltip>
             &emsp;&emsp;&lt;material-Tooltip text="Starter">
-            &emsp;&emsp;&emsp;&lt;material-Link iconType="MORE_VERT" textColor="WHITE" waves="LIGHT"/>
+            &emsp;&emsp;&emsp;&lt;material-link iconType="MORE_VERT" textColor="WHITE" waves="LIGHT"/>
             &emsp;&emsp;&lt;/material-Tooltip>
-            &emsp;&lt;/material-NavSection>
-            &lt;/material-NavBar>
+            &emsp;&lt;/material-navsection>
+            &lt;/material-navbar>
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Selection Event" description="We have provided a selection event to easily get the selected index."/>
-        <material-NavBar width="100%">
+    <material-row addStyleNames="code">
+        <material-title title="Selection Event" description="We have provided a selection event to easily get the selected index."/>
+        <material-navbar width="100%">
             <material-NavBrand marginLeft="60" href="#Test" float="LEFT" text="Title" />
-            <material-NavSection data-field="navSection" float="RIGHT">
-                <material-Link iconType="ACCOUNT_CIRCLE" iconPosition="LEFT" text="Account"  textColor="WHITE" waves="LIGHT"/>
-                <material-Link iconType="AUTORENEW" iconPosition="LEFT" text="Refresh" textColor="WHITE" waves="LIGHT"/>
+            <material-navsection data-field="navSection" float="RIGHT">
+                <material-link iconType="ACCOUNT_CIRCLE" iconPosition="LEFT" text="Account"  textColor="WHITE" waves="LIGHT"/>
+                <material-link iconType="AUTORENEW" iconPosition="LEFT" text="Refresh" textColor="WHITE" waves="LIGHT"/>
                 <material-Tooltip text="Menu">
-                    <material-Link iconType="SEARCH" textColor="WHITE" waves="LIGHT"/>
+                    <material-link iconType="SEARCH" textColor="WHITE" waves="LIGHT"/>
                 </material-Tooltip>
                 <material-Tooltip text="Starter">
-                    <material-Link iconType="MORE_VERT" textColor="WHITE" waves="LIGHT"/>
+                    <material-link iconType="MORE_VERT" textColor="WHITE" waves="LIGHT"/>
                 </material-Tooltip>
-            </material-NavSection>
-        </material-NavBar>
+            </material-navsection>
+        </material-navbar>
 
         <pre addStyleNames="lang-java">
             navSection.addSelectionHandler(selectionEvent -> MaterialToast.fireToast(selectionEvent.getSelectedItem() + " Selected Index"));
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
-        <material-Title title="Alignment" description="Add align='right' to your nav brand and align='left' to your nav section"/>
-        <material-NavBar width="100%">
+    <material-row addStyleNames="code">
+        <material-title title="Alignment" description="Add align='right' to your nav brand and align='left' to your nav section"/>
+        <material-navbar width="100%">
             <material-NavBrand href="#Test" float="RIGHT" text="App Title"/>
-            <material-NavSection float="LEFT">
+            <material-navsection float="LEFT">
                 <material-Tooltip text="Menu">
-                    <material-Link iconType="SEARCH" textColor="WHITE"/>
+                    <material-link iconType="SEARCH" textColor="WHITE"/>
                 </material-Tooltip>
                 <material-Tooltip text="Starter">
-                    <material-Link iconType="MORE_VERT" textColor="WHITE"/>
+                    <material-link iconType="MORE_VERT" textColor="WHITE"/>
                 </material-Tooltip>
-            </material-NavSection>
-        </material-NavBar>
+            </material-navsection>
+        </material-navbar>
 
         <pre addStyleNames="lang-xml">
-            &emsp;&lt;material-NavBar width="100%">
+            &emsp;&lt;material-navbar width="100%">
             &emsp;&lt;material-NavBrand href="#Test" float="RIGHT" text="App Title" />
-            &emsp;&lt;material-NavSection float="LEFT">
+            &emsp;&lt;material-navsection float="LEFT">
             &emsp;&emsp;&lt;material-Tooltip text="Menu">
-            &emsp;&emsp;&emsp;&lt;material-Link iconType="SEARCH" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&lt;material-link iconType="SEARCH" textColor="WHITE"/>
             &emsp;&emsp;&lt;/material-Tooltip>
             &emsp;&emsp;&lt;material-Tooltip text="Starter">
-            &emsp;&emsp;&emsp;&lt;material-Link iconType="MORE_VERT" textColor="WHITE"/>
+            &emsp;&emsp;&emsp;&lt;material-link iconType="MORE_VERT" textColor="WHITE"/>
             &emsp;&emsp;&lt;/material-Tooltip>
-            &emsp;&lt;/material-NavSection>
-            &lt;/material-NavBar>
+            &emsp;&lt;/material-navsection>
+            &lt;/material-navbar>
         </pre>
-    </material-Row>
+    </material-row>
 
-    <material-Row addStyleNames="code">
+    <material-row addStyleNames="code">
         <!-- Shrink Type -->
-        <material-Title title="Shrink Type" description="Scaling on Material NavBrand Logo (either image or text) with delightful animation "/>
+        <material-title title="Shrink Type" description="Scaling on Material NavBrand Logo (either image or text) with delightful animation "/>
         <material-Image url="http://oi63.tinypic.com/dqnpy1.jpg"/>
         <pre addStyleNames="lang-xml">
-            &emsp;&lt;material-NavBar type="SHRINK">
+            &emsp;&lt;material-navbar type="SHRINK">
             &emsp;&emsp;&lt;-- NavBar Contents here -->
-            &lt;/material-NavBar>
+            &lt;/material-navbar>
         </pre>
 
         <!-- Fixed Type -->
-        <material-Title title="Fixed Type" description="You can make your navbar fixed by adding: type='FIXED'"/>
+        <material-title title="Fixed Type" description="You can make your navbar fixed by adding: type='FIXED'"/>
 
-        <material-Row>
+        <material-row>
             <material-Image grid="s12 m12 l4" url="https://cloud.githubusercontent.com/assets/3138071/10072886/d4bb530e-6279-11e5-93ae-e3d8622a1236.gif"/>
-            <material-Column grid="s12 m12 l8">
-                <material-Row>
+            <material-column grid="s12 m12 l8">
+                <material-row>
                     <pre addStyleNames="lang-xml">
-                        &emsp;&lt;material-NavBar type="FIXED">
+                        &emsp;&lt;material-navbar type="FIXED">
                         &emsp;&emsp;&lt;-- NavBar Contents here -->
-                        &lt;/material-NavBar>
+                        &lt;/material-navbar>
                     </pre>
-                </material-Row>
-            </material-Column>
-        </material-Row>
+                </material-row>
+            </material-column>
+        </material-row>
 
 
-        <material-Title title="Tall Type" description="You can make your navbar fixed by adding: type='TALL'"/>
-        <material-Row>
+        <material-title title="Tall Type" description="You can make your navbar fixed by adding: type='TALL'"/>
+        <material-row>
             <material-Image grid="s12 m12 l4" url="https://cloud.githubusercontent.com/assets/3138071/10072883/d2121638-6279-11e5-8e84-5fbcec8148f5.PNG"/>
-            <material-Column grid="s12 m12 l8">
-                <material-Row>
+            <material-column grid="s12 m12 l8">
+                <material-row>
                     <pre addStyleNames="lang-xml">
-                        &emsp;&lt;material-NavBar type="TALL">
+                        &emsp;&lt;material-navbar type="TALL">
                         &emsp;&emsp;&lt;-- NavBar Contents here -->
-                        &lt;/material-NavBar>
+                        &lt;/material-navbar>
                     </pre>
-                </material-Row>
-            </material-Column>
-        </material-Row>
+                </material-row>
+            </material-column>
+        </material-row>
 
-        <material-Title title="MaterialHeader Usage" description="If you are using an open sidenav you are required to use MaterialHeader to contain your navBar component for padding-left usage. And add into your style this : header, main, footer { padding-left: 200px } wherein 200px is the width of your sidenav."/>
+        <material-title title="MaterialHeader Usage" description="If you are using an open sidenav you are required to use MaterialHeader to contain your navBar component for padding-left usage. And add into your style this : header, main, footer { padding-left: 200px } wherein 200px is the width of your sidenav."/>
         <pre addStyleNames="lang-xml">
             &emsp;&lt;material-Header>
-            &emsp;&lt;material-NavBar>
+            &emsp;&lt;material-navbar>
             &emsp;&emsp;&lt;-- Navbar content goes here -->
             &emsp;&lt;/material-Header>
-            &lt;/material-NavBar>
+            &lt;/material-navbar>
         </pre>
-    </material-Row>
+    </material-row>
     
 </div>

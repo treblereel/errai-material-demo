@@ -9,6 +9,7 @@ import javax.inject.Singleton;
  * @author Dmitrii Tikhomirov <chani@me.com>
  *         Created by treblereel on 5/16/17.
  */
+@Singleton
 @Templated("#root")
 @Page(path = "badges")
 public class BadgesPage {

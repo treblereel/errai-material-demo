@@ -24,6 +24,6 @@ public class Footer extends Composite {
         footer.add(copyright);
 
         copyright.setBackgroundColor(Color.BLUE);
-        copyright.add(new MaterialLabel("2017 Errai Material Demo"));
+        copyright.add(new MaterialLabel("2017 Errai Material Demo by Dmitrii Tikhomitov at github.com/treblereel"));
     }
 }

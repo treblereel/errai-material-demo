@@ -17,6 +17,7 @@ import javax.inject.Singleton;
  * @author Dmitrii Tikhomirov <chani@me.com>
  *         Created by treblereel on 5/18/17.
  */
+@Singleton
 @Templated
 @Page(path = "cards")
 public class CardsPage {

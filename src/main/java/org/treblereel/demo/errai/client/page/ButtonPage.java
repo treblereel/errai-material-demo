@@ -12,12 +12,14 @@ import org.jboss.errai.ui.shared.api.annotations.EventHandler;
 import org.jboss.errai.ui.shared.api.annotations.Templated;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * @author Dmitrii Tikhomirov <chani@me.com>
  *         Created by treblereel on 4/4/17.
  */
 @LoadAsync
+@Singleton
 @Templated
 @Page(path = "buttons")
 public class ButtonPage {

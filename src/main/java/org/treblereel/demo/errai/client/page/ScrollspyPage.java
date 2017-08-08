@@ -15,7 +15,7 @@ import javax.inject.Singleton;
  *         Created by treblereel on 6/6/17.
  */
 @Singleton
-@Templated
+@Templated("#root")
 @Page(path = "scrollspy")
 public class ScrollspyPage {
 

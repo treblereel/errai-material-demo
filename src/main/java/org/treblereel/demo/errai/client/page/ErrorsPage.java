@@ -14,11 +14,13 @@ import org.treblereel.demo.errai.client.utils.EmailValidator;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * @author Dmitrii Tikhomirov <chani@me.com>
  *         Created by treblereel on 5/19/17.
  */
+@Singleton
 @Templated
 @Page(path = "errors")
 public class ErrorsPage {
